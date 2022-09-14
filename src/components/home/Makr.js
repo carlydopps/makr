@@ -3,5 +3,7 @@
 // User who is logged in can view the logged in nav bar
 
 export const Makr = () => {
-
+    return (
+        <h1>Makr</h1>
+    )
 }
