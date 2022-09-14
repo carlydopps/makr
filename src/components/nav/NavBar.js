@@ -7,9 +7,8 @@ import { LoggedOutNav } from "./LoggedOutNav"
 export const NavBar = () => {
 
     const localUser = localStorage.getItem("current_user")
-    const currentUserObject = JSON.parse(localUser)
 
-    if (currentUserObject) {
+    if (localUser) {
         return <LoggedInNav/>
     } else {
         return <LoggedOutNav/>

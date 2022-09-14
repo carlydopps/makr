@@ -81,13 +81,13 @@ export const Register = () => {
                         copy.isPro = evt.target.value
                         setUser(copy)
                     }}
-                        type="radio" value={false} id="isPro" />Makr
+                        type="radio" value={false} name="accountType" id="isPro" />Makr
                     <input onChange={(evt) => {
                         const copy = {...user}
                         copy.isPro = evt.target.value
                         setUser(copy)
                     }}
-                        type="radio" value={true} id="isPro" />Professional
+                        type="radio" value={true} name="accountType" id="isPro" />Professional
                 </fieldset>
                 <fieldset>
                     <button type="submit"> Register </button>
