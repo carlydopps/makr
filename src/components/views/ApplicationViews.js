@@ -14,7 +14,6 @@ export const ApplicationViews = () => {
         <Routes>
             <Route path="/" element={
                 <>
-                    <LandingPage/>
                     <Outlet/>
                 </>
             }>
