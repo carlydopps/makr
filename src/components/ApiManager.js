@@ -21,9 +21,9 @@ export const getProsData = () => {
     .then(res => res.json())
 }
 
-// ----------------------------- User Data -------------------------------------
-
-
-// ----------------------------- User Data -------------------------------------
+export const getSelectedPro = (proId) => {
+    return fetch(`http://localhost:8088/pros?_expand=expertiseType&_expand=user&id=${proId}`)
+    .then(res => res.json())
+}
 
 
