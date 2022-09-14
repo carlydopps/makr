@@ -8,8 +8,8 @@ export const LoggedOutNav = () => {
 
     return (
         <>
-            <button onClick={() => navigate("/login")} className="navbar__button">Login</button>
-            <button onClick={() => navigate("/register")} className="navbar__button">Register</button>
+            <button onClick={() => navigate("/login")} className="navbar__button navbar__login">Login</button>
+            <button onClick={() => navigate("/register")} className="navbar__button navbar__register">Register</button>
         </>
     )
 }
