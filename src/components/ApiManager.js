@@ -7,8 +7,13 @@ export const getUsersData = () => {
     .then(res => res.json())
 }
 
-export const getCurrentUser = (currentUserId) => {
-    return fetch(`http://localhost:8088/users?userId=${currentUserId}`)
+export const getCurrentUser = (userId) => {
+    return fetch(`http://localhost:8088/users?id=${userId}`)
+    .then(res => res.json())
+}
+
+export const getAssignedMakr = (userId) => {
+    return fetch(`http://localhost:8088/users?id=${userId}`)
     .then(res => res.json())
 }
 
@@ -31,16 +36,41 @@ export const getSelectedPro = (proId) => {
     .then(res => res.json())
 }
 
-// ----------------------------- Request Data -------------------------------------
+export const getAssignedPro = (proId) => {
+    return fetch(`http://localhost:8088/pros?_expand=user&id=${proId}`)
+    .then(res => res.json())
+}
 
-export const postRequest = (request) => {
-    return fetch(`http://localhost:8088/requests`, {
+// ----------------------------- Project Data -------------------------------------
+export const getSelectedProject = (projectId) => {
+    return fetch(`http://localhost:8088/projects?id=${projectId}`)
+    .then(res => res.json())
+}
+
+export const getMakrProjects = (userId) => {
+    return fetch(`http://localhost:8088/projects?userId=${userId}`)
+    .then(res => res.json())
+}
+
+export const getProProjects = (userId) => {
+    return fetch(`http://localhost:8088/projects?proId=${userId}`)
+    .then(res => res.json())
+}
+
+export const postProject = (project) => {
+    return fetch(`http://localhost:8088/projects`, {
         method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(request)
+            body: JSON.stringify(project)
         })
             .then(res => res.json())
+}
+
+export const deleteProject = (projectId) => {
+    return fetch(`http://localhost:8088/projects/${projectId}`, {
+        method: "DELETE"
+    })
 }
 

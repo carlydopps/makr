@@ -5,12 +5,12 @@
 
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { getCurrentUser, postRequest } from "../ApiManager"
+import { getCurrentUser, postProject } from "../ApiManager"
 
-export const RequestForm = ({pro}) => {
+export const ProjectForm = ({pro}) => {
 
     const [user, setUser] = useState([])
-    const [request, updateRequest] = useState({
+    const [project, updateProject] = useState({
         title: "",
         description: "",
         date: "",
@@ -35,22 +35,22 @@ export const RequestForm = ({pro}) => {
     const handleSubmit = (event) => {
         event.preventDefault()
 
-        const newRequest = {
+        const newProject = {
             userId: user.id,
             proId: pro.id,
-            title: request.title,
-            description: request.description,
-            date: request.date,
-            time: request.time
+            title: project.title,
+            description: project.description,
+            date: project.date,
+            time: project.time
         }
 
-        postRequest(newRequest)
+        postProject(newProject)
             .then(() => navigate("/account"))
     }
 
     return (
-        <form className="requestForm">
-            <h2 className="requestForm__title">New Project Request</h2>
+        <form className="projectForm">
+            <h2 className="projectForm__title">New Project Request</h2>
             <p>User: {user.name}</p>
             <p>Professional: {pro?.user?.name}</p>
             <fieldset>
@@ -60,12 +60,12 @@ export const RequestForm = ({pro}) => {
                     type="text"
                     className="form-control"
                     placeholder="Title of the project"
-                    value={request.title}
+                    value={project.title}
                     onChange={
                         (event) => {
-                            const copy = {...request}
+                            const copy = {...project}
                             copy.title = event.target.value
-                            updateRequest(copy)
+                            updateProject(copy)
                         }
                     }
                 />
@@ -76,12 +76,12 @@ export const RequestForm = ({pro}) => {
                     type="text"
                     className="form-control"
                     placeholder="Detailed description of the problem"
-                    value={request.description}
+                    value={project.description}
                     onChange={
                         (event) => {
-                            const copy = {...request}
+                            const copy = {...project}
                             copy.description = event.target.value
-                            updateRequest(copy)
+                            updateProject(copy)
                         }
                     }
                 />
@@ -92,12 +92,12 @@ export const RequestForm = ({pro}) => {
                     type="date"
                     className="form-control"
                     placeholder="Preferred date of service"
-                    value={request.date}
+                    value={project.date}
                     onChange={
                         (event) => {
-                            const copy = {...request}
+                            const copy = {...project}
                             copy.date = event.target.value
-                            updateRequest(copy)
+                            updateProject(copy)
                         }
                     }
                 />
@@ -108,12 +108,12 @@ export const RequestForm = ({pro}) => {
                     type="time"
                     className="form-control"
                     placeholder="Preferred time of service"
-                    value={request.time}
+                    value={project.time}
                     onChange={
                         (event) => {
-                            const copy = {...request}
+                            const copy = {...project}
                             copy.time = event.target.value
-                            updateRequest(copy)
+                            updateProject(copy)
                         }
                     }
                 />
