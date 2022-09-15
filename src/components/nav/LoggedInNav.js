@@ -3,6 +3,8 @@
 
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { ApplicationViews } from "../views/ApplicationViews"
+import { NavBar } from "./NavBar"
 
 export const LoggedInNav = () => {
 
@@ -26,7 +28,7 @@ export const LoggedInNav = () => {
             <button onClick={() => navigate("/account")} className="navbar__button navbar__account">Account</button>
             <button onClick={() => {
                 localStorage.removeItem("current_user")
-                navigate("/", {replace: true})
+                navigate("/")
                 }} className="navbar__button navbar__logout">Logout</button>
         </>
     )
