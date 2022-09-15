@@ -5,6 +5,7 @@
 
 import { useState } from "react"
 import { useNavigate } from "react-router"
+import { Link } from "react-router-dom"
 
 export const Register = () => {
     const [user, setUser] = useState({
@@ -31,7 +32,7 @@ export const Register = () => {
                         isPro: newUser.isPro
                     }))
 
-                    navigate("/home")
+                    navigate("/")
                 }
             })
             .then(
@@ -76,6 +77,12 @@ export const Register = () => {
                         placeholder="Email address" required />
                 </fieldset>
                 <fieldset>
+                    <label htmlFor="phone"> Phone Number </label>
+                    <input onChange={updateUser}
+                        type="ephonemail" id="phone" className="form-control"
+                        placeholder="(XXX) XXX-XXXX" required />
+                </fieldset>
+                <fieldset>
                     <input onChange={(evt) => {
                         const copy = {...user}
                         copy.isPro = evt.target.value
@@ -93,6 +100,9 @@ export const Register = () => {
                     <button type="submit"> Register </button>
                 </fieldset>
             </form>
+            <section className="link--login">
+                <Link to="/login">Already have an account?</Link>
+            </section>
         </main>
     )
 }

@@ -10,23 +10,13 @@ import { ProProfile } from "../pros/ProProfile"
 export const ApplicationViews = () => {
 
     return (
-        <Routes>
-            {
-                localStorage.getItem("current_user")
-                ? <Route path="/" element={
-                    <>
-                        <Makr/>
-                        <Outlet/>
-                    </>
-                }/>
-                : <Route path="/" element={
-                    <>
-                        <LandingPage/>
-                        <Outlet/>
-                    </>
-                }/>
-            }
-            <Route path="home" element={<Makr/>}/>
+        <Routes>                
+            <Route path="/" element={
+                <>
+                    <Makr/>
+                    <Outlet/>
+                </>
+            }/>
             <Route path="profile/:proId" element={<ProProfile/>}/>
             <Route path="account" element={<Account/>}/>
             <Route path="request-form" element={<RequestForm/>}/>
