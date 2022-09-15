@@ -2,7 +2,6 @@
 
 import { Outlet, Route, Routes } from "react-router-dom"
 import { Account } from "../accounts/Account"
-import { AccountEdit } from "../accounts/AccountEdit"
 import { Makr } from "../home/Makr"
 import { ProjectDetails } from "../projects/ProjectDetails"
 import { ProjectForm } from "../projects/ProjectForm"
@@ -20,7 +19,6 @@ export const ApplicationViews = () => {
             }/>
             <Route path="profile/:proId" element={<ProProfile/>}/>
             <Route path="account/:userId" element={<Account/>}/>
-            <Route path="account/:userId/edit" element={<AccountEdit/>}/>
             <Route path="project-form" element={<ProjectForm/>}/>
             <Route path="/project/:projectId/details" element={<ProjectDetails/>}/>
         </Routes>
