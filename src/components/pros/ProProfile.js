@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { getSelectedPro } from "../ApiManager"
-import { RequestForm } from "../projects/RequestForm"
+import { ProjectForm } from "../projects/ProjectForm"
 
 export const ProProfile = () => {
 
@@ -22,16 +22,16 @@ export const ProProfile = () => {
     )
 
     const handleBookSession = () => {
-        <RequestForm pro={pro}/>
-        navigate("/request-form")
+        <ProjectForm pro={pro}/>
+        navigate("/project-form")
     }
 
     return <>
         <header></header>
         <section>
             <h2>{pro.user?.name}</h2>
-            <Link to="/request-form" onClick=
-                {() => {<RequestForm pro={pro}/>}}
+            <Link to="/project-form" onClick=
+                {() => {<ProjectForm pro={pro}/>}}
                 className="btn__book">Book a Session</Link>
         </section>
         <section>
