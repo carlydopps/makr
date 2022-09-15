@@ -20,8 +20,8 @@ export const ProList = () => {
     return <>
         {
             pros.map(pro => {
-                return <>
-                    <button onClick={() => navigate(`/profile/${pro.id}`)} className="button__pro" key={`pro--${pro.id}`}>
+                return <div key={`pro--${pro.id}`}>
+                    <button onClick={() => navigate(`/profile/${pro.id}`)} className="button__pro">
                         <header>{pro.user.name}</header>
                         <ul>
                             <li>{pro.expertiseType.name}</li>
@@ -29,7 +29,7 @@ export const ProList = () => {
                             <li>{pro.price.toLocaleString(`en-US`, {style: 'currency', currency: 'USD'})}</li>
                         </ul>
                     </button>
-                </>
+                </div>
             })
         }
     </>

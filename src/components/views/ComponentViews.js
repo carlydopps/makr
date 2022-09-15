@@ -3,7 +3,7 @@ import { Account } from "../accounts/Account"
 import { LandingPage } from "../home/LandingPage"
 import { Makr } from "../home/Makr"
 import { Profile } from "../profiles/Profile"
-import { ProjectForm } from "../projects/ProjectForm"
+import { ProjectForm } from "../projects/RequestForm"
 
 export const ComponentViews = () => {
     return (

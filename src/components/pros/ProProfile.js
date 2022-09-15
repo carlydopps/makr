@@ -1,16 +1,12 @@
 import { useEffect, useState } from "react"
-import { useNavigate, useParams } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import { getSelectedPro } from "../ApiManager"
+import { RequestForm } from "../projects/RequestForm"
 
 export const ProProfile = () => {
 
     const {proId} = useParams()
-    const [pro, updatePro] = useState({
-        aboutMe: "",
-        expertiseType: "",
-        price: 0,
-        experience: 0
-    })
+    const [pro, updatePro] = useState({})
 
     const navigate = useNavigate()
 
@@ -18,23 +14,30 @@ export const ProProfile = () => {
         () => {
             getSelectedPro(proId)
                 .then((data) => {
-                    const singlePro = data[0]
-                    updatePro(singlePro)
+                    const selectedPro = data[0]
+                    updatePro(selectedPro)
                 })
         },
         [proId]
     )
 
+    const handleBookSession = () => {
+        <RequestForm pro={pro}/>
+        navigate("/request-form")
+    }
+
     return <>
         <header></header>
         <section>
             <h2>{pro.user?.name}</h2>
-            <button onClick={() => navigate(`/request-form/${pro.id}`)}className="btn__book">Book a Session</button>
+            <Link to="/request-form" onClick=
+                {() => {<RequestForm pro={pro}/>}}
+                className="btn__book">Book a Session</Link>
         </section>
         <section>
             <div>
-                <p>{pro.expertiseType.name}</p>
-                <p>{pro.price.toLocaleString(`en-US`, {style: 'currency', currency: 'USD'})} / hr</p>
+                <p>{pro.expertiseType?.name}</p>
+                <p>{pro.price?.toLocaleString(`en-US`, {style: 'currency', currency: 'USD'})} / hr</p>
                 <p>{pro.aboutMe}</p>
                 <p>{pro.experience} years of experience</p>
             </div>

@@ -7,6 +7,11 @@ export const getUsersData = () => {
     .then(res => res.json())
 }
 
+export const getCurrentUser = (currentUserId) => {
+    return fetch(`http://localhost:8088/users?userId=${currentUserId}`)
+    .then(res => res.json())
+}
+
 // ----------------------------- Expertise Data -------------------------------------
 
 export const getExpertiseData = () => {
@@ -26,4 +31,16 @@ export const getSelectedPro = (proId) => {
     .then(res => res.json())
 }
 
+// ----------------------------- Request Data -------------------------------------
+
+export const postRequest = (request) => {
+    return fetch(`http://localhost:8088/requests`, {
+        method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(request)
+        })
+            .then(res => res.json())
+}
 
