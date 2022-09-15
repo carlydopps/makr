@@ -2,9 +2,10 @@
 
 import { Outlet, Route, Routes } from "react-router-dom"
 import { Account } from "../accounts/Account"
-import { LandingPage } from "../home/LandingPage"
+import { AccountEdit } from "../accounts/AccountEdit"
 import { Makr } from "../home/Makr"
-import { RequestForm } from "../projects/RequestForm"
+import { ProjectDetails } from "../projects/ProjectDetails"
+import { ProjectForm } from "../projects/ProjectForm"
 import { ProProfile } from "../pros/ProProfile"
 
 export const ApplicationViews = () => {
@@ -18,8 +19,10 @@ export const ApplicationViews = () => {
                 </>
             }/>
             <Route path="profile/:proId" element={<ProProfile/>}/>
-            <Route path="account" element={<Account/>}/>
-            <Route path="request-form" element={<RequestForm/>}/>
+            <Route path="account/:userId" element={<Account/>}/>
+            <Route path="account/:userId/edit" element={<AccountEdit/>}/>
+            <Route path="project-form" element={<ProjectForm/>}/>
+            <Route path="/project/:projectId/details" element={<ProjectDetails/>}/>
         </Routes>
     )
 }
