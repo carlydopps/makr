@@ -49,7 +49,7 @@ export const Account = () => {
             <section>
                 <h3>Contact Information</h3>
                 <p>Email: {user.email}</p>
-                <p>Phone: {user.phone}</p>
+                <p>Phone: {`(${user.phone.slice(0,3)}) ${user.phone.slice(3, 6)}-${user.phone.slice(6,10)}`}</p>
                 <p>Account Type: {user.isPro ? "Pro" : "Makr"}</p>
                 <button onClick={() => updateClickStatus(true)}>Edit Contact Information</button>
             </section>
