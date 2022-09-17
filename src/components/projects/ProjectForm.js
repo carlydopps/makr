@@ -4,11 +4,13 @@
 // User can click a button to submit a project and trigger a submitted message
 
 import { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
-import { getCurrentUser, postProject } from "../ApiManager"
+import { useNavigate, useParams } from "react-router-dom"
+import { getCurrentUser, getSelectedPro, postProject } from "../ApiManager"
 
-export const ProjectForm = ({pro}) => {
+export const ProjectForm = () => {
 
+    const {proId} = useParams()
+    const [pro, setPro] = useState([])
     const [user, setUser] = useState([])
     const [project, updateProject] = useState({
         title: "",
@@ -32,6 +34,17 @@ export const ProjectForm = ({pro}) => {
         []
     )
 
+    useEffect(
+        () => {
+            getSelectedPro(proId)
+                .then(data => {
+                    const selectedPro = data[0]
+                    setPro(selectedPro)
+                })
+        }, 
+        [proId]
+    )
+
     const handleSubmit = (event) => {
         event.preventDefault()
 
@@ -45,7 +58,7 @@ export const ProjectForm = ({pro}) => {
         }
 
         postProject(newProject)
-            .then(() => navigate("/account"))
+            .then(() => navigate(`/account/${user.id}`))
     }
 
     return (

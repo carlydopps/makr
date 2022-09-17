@@ -48,16 +48,8 @@ export const ProjectDetails = () => {
 
     const returnButton = () => {
         return <button onClick={() => 
-            navigate(`/account/${user.id}`)}
+            navigate(`/projects`)}
             >Return to Project List</button>
-    }
-
-    const deleteButton = (projectId) => {
-        return <button onClick={() => {
-            deleteProject(projectId)
-                .then(navigate(`/account/${user.id}`))
-
-        }} className="project__delete">Delete</button>
     }
 
     return <>
@@ -70,7 +62,7 @@ export const ProjectDetails = () => {
                 ? <section>
                     <p>Makr: {makr?.name}</p>
                     <p>{makr?.email}</p>
-                    <p>{`(${makr.phone.slice(0,3)}) ${makr.phone.slice(3, 6)}-${makr.phone.slice(6,10)}`}</p>
+                    <p>{`(${makr?.phone?.slice(0,3)}) ${makr?.phone?.slice(3, 6)}-${makr?.phone?.slice(6,10)}`}</p>
                 </section>
                 : <section>
                     <p>Pro: 
@@ -89,11 +81,6 @@ export const ProjectDetails = () => {
                 <p>{project.date} at {project.time}</p> 
             </article>    
         </section>
-        {
-            user.isPro
-            ? ""
-            : deleteButton(project.id)
-        }
         {
             returnButton()
         }

@@ -6,7 +6,7 @@ import { ProjectForm } from "../projects/ProjectForm"
 export const ProProfile = () => {
 
     const {proId} = useParams()
-    const [pro, updatePro] = useState({})
+    const [pro, updatePro] = useState([])
 
     const navigate = useNavigate()
 
@@ -30,9 +30,8 @@ export const ProProfile = () => {
         <header></header>
         <section>
             <h2>{pro.user?.name}</h2>
-            <Link to="/project-form" onClick=
-                {() => {<ProjectForm pro={pro}/>}}
-                className="btn__book">Book a Session</Link>
+            <button onClick={() => navigate(`/project-form/${pro.id}`)}
+                className="btn__book">Book a Session</button>
         </section>
         <section>
             <div>
