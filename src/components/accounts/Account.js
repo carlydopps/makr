@@ -6,63 +6,99 @@
 // User can view the logged in nav bar
 
 import { useEffect, useState } from "react"
-import { useNavigate, useParams } from "react-router-dom"
-import { getCurrentUser, saveEditedUser } from "../ApiManager"
-import { ProjectListMakr } from "../projects/ProjectListMakr"
-import { ProjectListPro } from "../projects/ProjectListPro"
+import { useParams } from "react-router-dom"
+import { getCurrentPro, getCurrentUser, getExpertiseTypes, saveEditedPro, saveEditedUser } from "../ApiManager"
 
 export const Account = () => {
-
+    
     const {userId} = useParams()
     const [clickStatus, updateClickStatus] = useState(false)
-    const [accountType, updateAccountType] = useState([])
+    const [expertiseTypes, setExpertiseTypes] = useState([])
     const [user, updateUser] = useState({
         email: "",
         phone: "",
         isPro: ""
     })
+    const [pro, updatePro] = useState({
+        aboutMe: "",
+        expertiseTypeId: 0,
+        price: "",
+        experience: ""
+    })
 
-    const navigate = useNavigate()
+    const localUser = localStorage.getItem("current_user")
+    const currentUser = JSON.parse(localUser)
+
     const firstName = user?.name?.split(" ")[0]
+
+    const renderUser = () => {
+        getCurrentUser(userId)
+            .then(data => {
+                const singleUser = data[0]
+                updateUser(singleUser)})
+        getCurrentPro(currentUser.id)
+            .then(data => {
+                const currentPro = data[0]
+                updatePro(currentPro)
+            })
+    }
 
     useEffect(
         () => {
-            getCurrentUser(userId)
-                .then(data => {
-                    const singleUser = data[0]
-                    updateUser(singleUser)
-                    updateAccountType(singleUser.isPro)})
-
+            renderUser()
         },
         [userId]
+    )
+
+    useEffect(
+        () => {
+            getExpertiseTypes()
+                .then(data => setExpertiseTypes(data))
+        },
+        []
     )
 
     const handleSave = (event) => {
         event.preventDefault()
 
         saveEditedUser(user)
+            .then(() => {
+                const updatedPro = {...pro}
+                delete updatedPro.expertiseType
+                delete updatedPro.user
+                saveEditedPro(updatedPro)})
             .then(() => updateClickStatus(false))
     }
 
+    const handleCancel = (event) => {
+        event.preventDefault()
+
+        updateClickStatus(false)
+        renderUser()
+    }
+
     const defaultDisplay = () => {
+
         return <>
             <section>
                 <h3>Contact Information</h3>
                 <p>Email: {user.email}</p>
-                <p>Phone: {`(${user.phone.slice(0,3)}) ${user.phone.slice(3, 6)}-${user.phone.slice(6,10)}`}</p>
-                <p>Account Type: {user.isPro ? "Pro" : "Makr"}</p>
+                <p>Phone: {`(${user.phone.slice(0,3)}) ${user?.phone?.slice(3, 6)}-${user.phone.slice(6,10)}`}</p>
+                <p>Account Type: {currentUser.isPro ? "Pro" : "Makr"}</p>
+                {
+                    currentUser.isPro
+                    ? <section>
+                        <h2>Professional Details</h2>
+                        <p>About Me: {pro.aboutMe}</p>
+                        <p>Expertise: {pro.expertiseType?.name}</p>
+                        <p>Hourly Rate: {pro.price.toLocaleString(`en-US`, {style: 'currency', currency: 'USD'})}</p>
+                        <p>Years of Experience: {pro.experience}</p>
+                    </section>
+                    : ""
+                    
+                }
                 <button onClick={() => updateClickStatus(true)}>Edit Contact Information</button>
             </section>
-            <h3>My Projects</h3>
-            <article>
-                <ul>
-                {
-                    user.isPro
-                    ? <ProjectListPro user={user}/>
-                    : <ProjectListMakr user={user}/>
-                }
-                </ul>
-            </article>
         </>
     }
 
@@ -104,39 +140,90 @@ export const Account = () => {
                     } />
             </div>
         </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="type">Account Type: </label>
-                <input 
-                    checked={user.isPro ? false : true}
-                    onChange={
-                        (event) => {
-                            const copy = {...user}
-                            copy.isPro = event.target.checked
-                            updateUser(copy)
-                        }
-                    } 
-                    type="radio"
-                    name="accountType"
-                />Makr
-                <input 
-                    checked={user.isPro ? true : false}
-                    onChange={
-                        (event) => {
-                            const copy = {...user}
-                            copy.isPro = event.target.checked
-                            updateUser(copy)
-                        }
-                    } 
-                    type="radio"
-                    name="accountType"
-                />Professional
-            </div>
-        </fieldset>
+        {
+            currentUser.isPro
+            ?<section>
+               <fieldset>
+                    <label htmlFor="aboutMe"> About Me: </label>
+                    <input
+                        required
+                        type="text" 
+                        id="aboutMe" 
+                        className="form-control"
+                        placeholder={pro.aboutMe}
+                        value={pro.aboutMe}
+                        onChange={
+                            (event) => {
+                                const copy = {...pro}
+                                copy.aboutMe = event.target.value
+                                updatePro(copy)
+                            }
+                        } />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="expertise"> Expertise: </label>
+                    <select
+                        onChange={
+                            (event) => {
+                                const copy = {...pro}
+                                copy.expertiseTypeId = parseInt(event.target.value)
+                                updatePro(copy)
+                            }
+                        }>
+                            <option value={pro.expertiseTypeId}>{pro.expertiseType.name}</option>
+                            {
+                                expertiseTypes.map(expertise => <option
+                                key={expertise.id}
+                                value={expertise.id}>
+                                {expertise.name}</option>)
+                            }
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="price"> Price: </label>
+                    <input 
+                        required
+                        type="number" 
+                        id="price" 
+                        className="form-control"
+                        placeholder="$ 0.00"
+                        value={pro.price}
+                        onChange={
+                            (event) => {
+                                const copy = {...pro}
+                                copy.price = parseFloat(event.target.value)
+                                updatePro(copy)}
+                        }/>
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="experience"> Years of Experience: </label>
+                    <input
+                        required
+                        type="number" 
+                        id="experience" 
+                        className="form-control"
+                        placeholder="0"
+                        value={pro.experience}
+                        onChange={
+                            (event) => {
+                                const copy = {...pro}
+                                copy.experience = parseInt(event.target.value)
+                                updatePro(copy)
+                            }
+                        } />
+                </fieldset>
+            </section>
+            :""
+        }
         <button 
             onClick={(event) => handleSave(event)}
             className="btn btn-primary">
             Save
+        </button>
+        <button 
+            onClick={(event) => handleCancel(event)}
+            className="btn btn-primary">
+            Cancel
         </button>
     </form>
     }

@@ -5,6 +5,7 @@ import { Account } from "../accounts/Account"
 import { Makr } from "../home/Makr"
 import { ProjectDetails } from "../projects/ProjectDetails"
 import { ProjectForm } from "../projects/ProjectForm"
+import { ProjectList } from "../projects/ProjectList"
 import { ProProfile } from "../pros/ProProfile"
 
 export const ApplicationViews = () => {
@@ -17,10 +18,12 @@ export const ApplicationViews = () => {
                     <Outlet/>
                 </>
             }/>
+            <Route path="projects" element={<ProjectList/>}/>
+            <Route path="/project/:projectId/details" element={<ProjectDetails/>}/>
             <Route path="profile/:proId" element={<ProProfile/>}/>
             <Route path="account/:userId" element={<Account/>}/>
-            <Route path="project-form" element={<ProjectForm/>}/>
-            <Route path="/project/:projectId/details" element={<ProjectDetails/>}/>
+            <Route path="project-form/:proId" element={<ProjectForm/>}/>
+            
         </Routes>
     )
 }
