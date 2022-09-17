@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { deleteProject, getMakrProjects } from "../ApiManager"
 
 export const ProjectListMakr = ({userId}) => {
     
     const [projects, setProjects] = useState([])
+
+    const navigate = useNavigate()
 
     const renderProjects = () => {
         getMakrProjects(userId)
@@ -21,14 +23,14 @@ export const ProjectListMakr = ({userId}) => {
         return <button onClick={() => {
             deleteProject(projectId)
                 .then(renderProjects)
-
         }} className="project__delete">Delete</button>
     }
 
     return <>
-        <h2>Your Makr Project List</h2>
+        <h2>Makr Project List</h2>
         {
-            projects.map(
+            projects.length > 0
+            ? projects.map(
                 (project) => <li className="project" key={project.id}>
                     <header className="project__header">
                         <Link to={`/project/${project.id}/details`}>{project.title}</Link>
@@ -36,6 +38,10 @@ export const ProjectListMakr = ({userId}) => {
                         {deleteButton(project.id)}
                 </li>
             )
+            :<>
+                <p>Start creating! 🏡</p>
+                <button onClick={() => navigate("/")}>Check out our pros</button>
+            </>
         }
     </>
 }
