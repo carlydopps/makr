@@ -5,7 +5,10 @@ import { deleteProject, getAssignedMakr, getAssignedPro, getCurrentUser, getSele
 export const ProjectDetails = () => {
 
     const {projectId} = useParams()
-    const [project, updateProject] = useState({})
+    const [project, updateProject] = useState({
+        date: "",
+        time: ""
+    })
     const [user, setUser] = useState([])
     const [makr, setMakr] = useState([])
     const [pro, setPro] = useState([])
