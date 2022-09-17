@@ -58,7 +58,7 @@ export const ProjectForm = () => {
         }
 
         postProject(newProject)
-            .then(() => navigate(`/account/${user.id}`))
+            .then(() => navigate(`/projects`))
     }
 
     return (
