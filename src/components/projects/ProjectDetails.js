@@ -80,10 +80,10 @@ export const ProjectDetails = () => {
         </header>
         <section>
             {
-                user.isPro
+                user.isPro && user.id !== project.userId
                 ? <section>
                     <p>Makr: {makr?.name}</p>
-                    <p>{makr?.email}</p>
+                    <a href={`mailto:${makr?.email}`}>{makr?.email}</a>
                     <p>{`(${makr?.phone?.slice(0,3)}) ${makr?.phone?.slice(3, 6)}-${makr?.phone?.slice(6,10)}`}</p>
                 </section>
                 : <section>
