@@ -12,7 +12,7 @@ export const ProList = () => {
     useEffect(
         () => {
             getProsData()
-            .then(proArray => setPros(proArray))
+                .then(proArray => setPros(proArray))
         },
         []
     )
