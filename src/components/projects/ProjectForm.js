@@ -54,7 +54,7 @@ export const ProjectForm = () => {
             title: project.title,
             description: project.description,
             date: project.date,
-            time: project.time
+            time: new Date(project.date).toLocaleTimeString('en-us')
         }
 
         postProject(newProject)
@@ -102,7 +102,7 @@ export const ProjectForm = () => {
             <fieldset>
                 <label htmlFor="date">Date: </label>
                 <input
-                    type="date"
+                    type="datetime-local"
                     className="form-control"
                     placeholder="Preferred date of service"
                     value={project.date}
@@ -110,22 +110,6 @@ export const ProjectForm = () => {
                         (event) => {
                             const copy = {...project}
                             copy.date = event.target.value
-                            updateProject(copy)
-                        }
-                    }
-                />
-            </fieldset>
-            <fieldset>
-                <label htmlFor="time">Time: </label>
-                <input
-                    type="time"
-                    className="form-control"
-                    placeholder="Preferred time of service"
-                    value={project.time}
-                    onChange={
-                        (event) => {
-                            const copy = {...project}
-                            copy.time = event.target.value
                             updateProject(copy)
                         }
                     }
