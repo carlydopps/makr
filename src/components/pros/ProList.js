@@ -9,13 +9,10 @@ export const ProList = () => {
     const [pros, setPros] = useState([])
     const navigate = useNavigate()
 
-    const renderPros = () => {
-        getProsData()
-        .then(proArray => setPros(proArray))
-    }
     useEffect(
         () => {
-            renderPros()
+            getProsData()
+                .then(proArray => setPros(proArray))
         },
         []
     )
@@ -23,7 +20,6 @@ export const ProList = () => {
     return <>
         {
             pros.map(pro => {
-                renderPros()
                 return <div key={`pro--${pro.id}`}>
                     <button onClick={() => navigate(`/profile/${pro.id}`)} className="button__pro">
                         <header>{pro.user.name}</header>
