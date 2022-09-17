@@ -46,7 +46,7 @@ export const Register = () => {
         }
 
         postPro(newPro)
-            .then(navigate("/"))
+            .then(() => navigate("/"))
     }
 
     const registerNewUser = () => {
@@ -260,7 +260,7 @@ export const Register = () => {
                     : ""
                 }
             <button 
-                onClick={event => registerNewUser(event)}
+                onClick={event => handleRegister(event)}
                 type="register"> Register
             </button>
             <section className="link--login">
