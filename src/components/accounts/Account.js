@@ -231,7 +231,7 @@ export const Account = () => {
 
     return (
         <>
-            <h1>Hello, {firstName}</h1>
+            <h1>Hi, {firstName}!</h1>
             <section>
                 {
                     clickStatus
