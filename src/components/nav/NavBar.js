@@ -13,6 +13,7 @@ export const NavBar = () => {
     return (
         <>
             <button onClick={() => navigate(`/`)} className="navbar__button navbar__home">Home</button>
+            <button onClick={() => navigate(`/projects`)} className="navbar__button navbar__projects">My Projects</button>
             <button onClick={() => navigate(`/account/${currentUser.id}`)} className="navbar__button navbar__account">Account</button>
             <button onClick={() => {
                 localStorage.removeItem("current_user")
