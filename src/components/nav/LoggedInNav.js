@@ -1,15 +1,18 @@
-// User can click an account icon in the nav bar that will display a list of route options
-// User can click on a logout button
-
+import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import "./NavBar.css"
 
-export const NavBar = () => {
+export const LoggedInNav = () => {
+
+    const [loggedInStatus, setStatus] = useState(true)
 
     const localUser = localStorage.getItem("current_user")
     const currentUser = JSON.parse(localUser)
 
     const navigate = useNavigate()
+
+    const handleLogout = () => {
+        setStatus(false)
+    }
 
     return (
         <>

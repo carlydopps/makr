@@ -5,6 +5,7 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router"
 import { Link } from "react-router-dom"
+import "./Auth.css"
 
 export const Login = () => {
 
@@ -48,7 +49,7 @@ export const Login = () => {
                             required autoFocus />
                     </fieldset>
                     <fieldset>
-                        <button type="submit">
+                        <button type="submit" className="btn btn__login">
                             Log in
                         </button>
                     </fieldset>
