@@ -97,6 +97,7 @@ export const ProjectDetails = () => {
             <article>
                 <h4>Description</h4>
                 <p>{project.description}</p> 
+                <img src={project.image}></img>
             </article>
             <article>
                 <h4>Scheduled Time</h4>
