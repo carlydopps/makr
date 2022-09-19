@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { deleteProject, getAssignedMakr, getAssignedPro, getCurrentUser, getSelectedProject } from "../ApiManager"
+import "./ProjectDetails.css"
 
 export const ProjectDetails = () => {
 
@@ -97,7 +98,7 @@ export const ProjectDetails = () => {
             <article>
                 <h4>Description</h4>
                 <p>{project.description}</p> 
-                <img src={project.image}></img>
+                <img src={project.image} className="image"></img>
             </article>
             <article>
                 <h4>Scheduled Time</h4>

@@ -12,7 +12,7 @@ export const ProjectListPro = ({userId}) => {
             getProjects()
             .then(projects => {
                 const proProjects = projects.filter(project => project.pro.userId === userId)
-                 setProjects(proProjects)})
+                setProjects(proProjects)})
         },
         []
     )

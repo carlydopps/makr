@@ -17,7 +17,8 @@ export const Account = () => {
     const [user, updateUser] = useState({
         email: "",
         phone: "",
-        isPro: ""
+        isPro: "",
+        profileImage: ""
     })
     const [pro, updatePro] = useState({
         aboutMe: "",
