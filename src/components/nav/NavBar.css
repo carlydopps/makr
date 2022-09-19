@@ -7,3 +7,17 @@
     padding: 0.4rem;
     margin: 1rem;
 }
+
+.navbar__account {
+    border-radius: 100%;
+    height: 3.5rem;
+    width: 3.5rem;
+    justify-items: center;
+    padding: 0;
+}
+
+.navbar__image {
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+}
