@@ -146,7 +146,7 @@ export const ProjectForm = () => {
                 
                 <button onClick={(event) => showWidget(event)}
                     className="cloudinary-button">
-                    Upload files
+                    Add photo
                 </button>
             </section>
             <button

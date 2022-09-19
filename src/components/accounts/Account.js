@@ -8,6 +8,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { getCurrentPro, getCurrentUser, getExpertiseTypes, saveEditedPro, saveEditedUser } from "../ApiManager"
+import "./Account.css"
 
 export const Account = () => {
     
@@ -67,8 +68,10 @@ export const Account = () => {
                 const updatedPro = {...pro}
                 delete updatedPro.expertiseType
                 delete updatedPro.user
-                saveEditedPro(updatedPro)})
+                saveEditedPro(updatedPro)
+            })
             .then(() => updateClickStatus(false))
+            .then(() => window.location.reload(false))
     }
 
     const handleCancel = (event) => {
@@ -76,6 +79,24 @@ export const Account = () => {
 
         updateClickStatus(false)
         renderUser()
+    }
+
+    const showWidget = (event) => {
+        
+        event.preventDefault()
+
+        let widget = window.cloudinary.createUploadWidget(
+        {
+            cloudName: "dupram4w7",
+            uploadPreset: "huvsusnz"
+        },
+        (error, result) => {
+            if (!error && result && result.event === "success") {
+                const copy = {...user}
+                copy.profileImage = result.info.url
+                updateUser(copy)
+            }})
+            widget.open()
     }
 
     const defaultDisplay = () => {
@@ -98,14 +119,18 @@ export const Account = () => {
                     : ""
                     
                 }
-                <button onClick={() => updateClickStatus(true)}>Edit Contact Information</button>
+                <button onClick={() => updateClickStatus(true)}>Edit Profile</button>
             </section>
         </>
     }
 
     const editDetails = () => {
         return <form className="accountForm">
-        <h2 className="accountForm__title">Edit Contact Information</h2>
+        <h2 className="accountForm__title">Edit Profile Information</h2>
+        <button onClick={(event) => showWidget(event)}
+                    className="cloudinary-button">
+                    Update photo
+                </button>
         <fieldset>
             <div className="form-group">
                 <label htmlFor="email">Email: </label>
@@ -232,7 +257,11 @@ export const Account = () => {
 
     return (
         <>
-            <h1>Hi, {firstName}!</h1>
+            <header>
+                <img src={user.profileImage} className="image-profile"/>
+                <h1>Hi, {firstName}!</h1>
+            </header>
+            
             <section>
                 {
                     clickStatus
