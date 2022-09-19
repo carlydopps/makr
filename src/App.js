@@ -6,17 +6,19 @@ import { ApplicationViews } from "./components/views/ApplicationViews"
 import { Authorized } from "./components/views/Authorized"
 
 export const App = () => {
-    return <Routes>
-        <Route path="login" element={<Login/>}/>
-        <Route path="register" element={<Register/>}/>
-        <Route path="*" element={
-            <Authorized>
-                <>
-                    <NavBar/>
-                    <ApplicationViews/>
-                </>
-            </Authorized>
-            
-        }/>
-    </Routes>
+    return <>
+        <Routes>
+            <Route path="login" element={<Login/>}/>
+            <Route path="register" element={<Register/>}/>
+            <Route path="*" element={
+                <Authorized>
+                    <>
+                        <NavBar/>
+                        <ApplicationViews/>
+                    </>
+                </Authorized>
+                
+            }/>
+        </Routes>
+    </>
 }
