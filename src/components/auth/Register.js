@@ -55,7 +55,9 @@ export const Register = () => {
             name: user.name,
             email: user.email,
             phone: user.phone.replace(/\D/g, ""),
-            isPro: user.isPro
+            isPro: user.isPro,
+            profileImage: "https://res.cloudinary.com/dupram4w7/image/upload/v1663614663/tqks62fc0rpeqzvar1tb.png"
+            
         }
 
         postUser(newUser)
