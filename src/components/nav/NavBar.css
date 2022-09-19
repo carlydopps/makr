@@ -1,0 +1,9 @@
+.navbar__button {
+    border-color: lightgray;
+    border-radius: 10%;
+    background-color: lightgray;
+    height: 3rem;
+    width: 7rem;
+    padding: 0.4rem;
+    margin: 1rem;
+}

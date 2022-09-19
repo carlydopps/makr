@@ -1,0 +1,15 @@
+.button__pro {
+    color: black;
+    border-color: lightgray;
+    background-color: lightgray;
+    padding: 1rem;
+    border-radius: 5%;
+    margin: 1rem;
+    width: 15rem;
+}
+
+.list__pros {
+    display: grid;
+    grid-template-columns: 1fr 80%;
+    grid-template-rows: auto; 
+    }

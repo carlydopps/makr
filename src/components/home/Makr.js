@@ -10,8 +10,10 @@ export const Makr = () => {
         <>
             <header></header>
             <section className="home__header">
-                <h1>Makr</h1>
-                <h3>Summary</h3>
+                <h1>Welcome to Makr, </h1>
+            </section>
+            <section>
+                <h3>a platform that helps the makers, the creators, and the DIYers accomplish more with personalized expert guidance</h3>
             </section>
             <section>
                 <h4>Professionals</h4>

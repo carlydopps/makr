@@ -1,0 +1,9 @@
+.btn {
+    border-color: #FF9559;
+    border-radius: 10%;
+    background-color: #FF9559;
+    height: 2rem;
+    width: 7rem;
+    padding: 0.4rem;
+    margin: 1rem;
+}

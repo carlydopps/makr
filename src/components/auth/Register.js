@@ -261,7 +261,9 @@ export const Register = () => {
                 }
             <button 
                 onClick={event => handleRegister(event)}
-                type="register"> Register
+                type="register" 
+                className="btn btn__register"> Register
+                
             </button>
             <section className="link--login">
                 <Link to="/login">Already have an account?</Link>

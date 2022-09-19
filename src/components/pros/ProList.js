@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getProsData } from "../ApiManager"
+import "./ProList.css"
 
 export const ProList = () => {
 
@@ -17,7 +18,7 @@ export const ProList = () => {
         []
     )
 
-    return <>
+    return <section className="list__pros">
         {
             pros.map(pro => {
                 return <div key={`pro--${pro.id}`}>
@@ -32,5 +33,5 @@ export const ProList = () => {
                 </div>
             })
         }
-    </>
+    </section>
 }
