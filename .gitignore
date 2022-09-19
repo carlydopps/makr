@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+CLOUD_NAME="dupram4w7"
+API_KEY="624895647923145"
+API_SECRET="cKV-8PX2SOaZkZoT5iStf2s0TmM"
+UPLOAD_PRESET="huvsusnz"
