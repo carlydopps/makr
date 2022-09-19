@@ -7,6 +7,7 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { getCurrentUser, getSelectedPro, postProject } from "../ApiManager"
 import "./ProjectForm.css"
+import { Image } from 'cloudinary-react'
 
 export const ProjectForm = () => {
 
@@ -17,7 +18,8 @@ export const ProjectForm = () => {
         title: "",
         description: "",
         date: "",
-        time: ""
+        time: "",
+        image: ""
     })
 
     const navigate = useNavigate()
@@ -55,11 +57,32 @@ export const ProjectForm = () => {
             title: project.title,
             description: project.description,
             date: project.date,
-            time: new Date(project.date).toLocaleTimeString('en-us')
+            time: new Date(project.date).toLocaleTimeString('en-us'),
+            image: project.image
         }
 
         postProject(newProject)
             .then(() => navigate(`/projects`))
+    }
+
+    let myWidget = window.cloudinary.createUploadWidget(
+        {
+            cloudName: "dupram4w7",
+            uploadPreset: "huvsusnz"
+        },
+        (error, result) => {
+            if (!error && result && result.event === "success") {
+                console.log("Done! Here is the image info: ", result.info)
+
+                const copy = {...project}
+                copy.image = result.info.url
+                updateProject(copy)
+            }
+        }
+    )
+
+    const showWidget = (myWidget) => {
+        myWidget.open()
     }
 
     return (
@@ -116,6 +139,11 @@ export const ProjectForm = () => {
                     }
                 />
             </fieldset>
+            <img src={project.image}/>
+            <button onClick={() => showWidget(myWidget)}
+            className="cloudinary-button">
+                Upload files
+            </button>
             <button
                 onClick={(event) => handleSubmit(event)}
                 className="btn__submit"
