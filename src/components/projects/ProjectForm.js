@@ -65,24 +65,22 @@ export const ProjectForm = () => {
             .then(() => navigate(`/projects`))
     }
 
-    let myWidget = window.cloudinary.createUploadWidget(
+    const showWidget = (event) => {
+        
+        event.preventDefault()
+
+        let widget = window.cloudinary.createUploadWidget(
         {
             cloudName: "dupram4w7",
             uploadPreset: "huvsusnz"
         },
         (error, result) => {
             if (!error && result && result.event === "success") {
-                console.log("Done! Here is the image info: ", result.info)
-
                 const copy = {...project}
                 copy.image = result.info.url
                 updateProject(copy)
-            }
-        }
-    )
-
-    const showWidget = (myWidget) => {
-        myWidget.open()
+            }})
+            widget.open()
     }
 
     return (
@@ -139,11 +137,18 @@ export const ProjectForm = () => {
                     }
                 />
             </fieldset>
-            <img src={project.image}/>
-            <button onClick={() => showWidget(myWidget)}
-            className="cloudinary-button">
-                Upload files
-            </button>
+            <section>
+                {
+                    project.image !== ""
+                    ? <img src={project.image} alt="" className="image"/>
+                    : ""
+                }
+                
+                <button onClick={(event) => showWidget(event)}
+                    className="cloudinary-button">
+                    Upload files
+                </button>
+            </section>
             <button
                 onClick={(event) => handleSubmit(event)}
                 className="btn__submit"
