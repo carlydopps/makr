@@ -23,7 +23,8 @@ export const ProList = () => {
             pros.map(pro => {
                 return <div key={`pro--${pro.id}`}>
                     <button onClick={() => navigate(`/profile/${pro.id}`)} className="button__pro">
-                        <header>{pro.user.name}</header>
+                        <img src={pro.user.profileImage} alt="Profile Image" className="profileImage-pro"/>
+                        <h4>{pro.user.name}</h4>
                         <ul>
                             <li>{pro.expertiseType.name}</li>
                             <li>{pro.experience} years of experience</li>

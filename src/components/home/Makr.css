@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400;700&display=swap');
+ 
+*{
+	Border: 1px dotted black;
+	}
+
+.home-header {
+    font-family: 'BenchNine', sans-serif;
+    font-weight: 700;
+    font-size: xx-large;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+}
+
+.home-summary {
+    font-weight: 400;
+    width: 30rem;
+    font-size: x-large;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pro-summary {
+    font-weight: 400;
+    font-size: x-large;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h4 {
+    margin-left: 2rem;
+}
