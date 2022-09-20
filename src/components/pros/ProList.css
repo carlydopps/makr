@@ -1,15 +1,41 @@
 .button__pro {
     color: black;
-    border-color: lightgray;
-    background-color: lightgray;
+    border: none;
+    background-color: rgba(132, 132, 152, 0.211);
     padding: 1rem;
     border-radius: 5%;
     margin: 1rem;
-    width: 15rem;
+    width: 14rem;
+    height: 21rem;
+    box-shadow: 0.5rem 0.5rem rgba(234, 229, 229, 0.493);
 }
 
 .list__pros {
     display: grid;
-    grid-template-columns: 1fr 80%;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto; 
-    }
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profileImage-pro {
+    width: 10rem;
+    height: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h4 {
+    text-align: center;
+    margin-left: 0;
+    margin-right: 1.5rem;
+    padding: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0; 
+    list-style: none;
+    text-align: center;
+}

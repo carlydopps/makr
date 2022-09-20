@@ -4,39 +4,20 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getCurrentUser } from "../ApiManager"
+import { AccountNav } from "./AccountNav"
 import "./NavBar.css"
 
 export const NavBar = () => {
-
-    const [user, setUser] = useState({})
-
-    const localUser = localStorage.getItem("current_user")
-    const currentUser = JSON.parse(localUser)
-
-    useEffect(
-        () => {
-            getCurrentUser(currentUser.id)
-            .then((data) => {
-                const singleUser = data[0]
-                setUser(singleUser)
-            })
-        },
-        []
-    )
 
     const navigate = useNavigate()
 
     return (
         <>
-            <button onClick={() => navigate(`/`)} className="navbar__button navbar__home">Home</button>
-            <button onClick={() => navigate(`/projects`)} className="navbar__button navbar__projects">My Projects</button>
-            <button onClick={() => navigate(`/account/${currentUser.id}`)} className="navbar__button navbar__account">
-                <img src={user?.profileImage} alt="Account" className="navbar__image"></img>
+            <button onClick={() => navigate(`/`)} className="navbar__button navbar__home">
+                <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1663639606/Screen_Shot_2022-09-19_at_9.05.23_PM-removebg-preview_cvnxt3.png' alt="Home" className="home-image"></img>
             </button>
-            <button onClick={() => {
-                localStorage.removeItem("current_user")
-                navigate("/", {replace: true})
-                }} className="navbar__button navbar__logout">Logout</button>
+            <button onClick={() => navigate(`/projects`)} className="navbar__button navbar__projects">PROJECTS</button>
+            <AccountNav/>
         </>
     )
 }
