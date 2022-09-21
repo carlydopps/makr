@@ -33,8 +33,12 @@ export const ProProfile = () => {
         <section>
             <h2>{pro.user?.name}</h2>
             {
-                <button onClick={() => navigate(`/project-form/${pro.id}`)}
-                className="btn__book" disabled={pro.userId === currentUser.id ? true : false}>Book a Session</button>
+                currentUser
+                ? <button onClick={() => navigate(`/project-form/${pro.id}`)}
+                className="btn__book" disabled={pro.userId === currentUser.id 
+                    ? true 
+                    : false}>Book a Session</button>
+                : <button onClick={() => navigate('/login')}>Login to book</button>
             }
             
             
