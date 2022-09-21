@@ -15,7 +15,6 @@ export const App = () => {
                 <>
                     <NavBar/>
                     <ApplicationViews/>
-                    <Footer/>
                 </>
             }/>
             <Route path="/login" element={<Login/>}/>

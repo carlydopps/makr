@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400;700&display=swap');
  
-/* *{
+*{
 	Border: 1px dotted black;
-	} */
+}
+
+main {
+    min-height: calc(100vh - 10rem)
+}
 
 .home-header {
     font-family: 'BenchNine', sans-serif;
@@ -32,4 +36,13 @@
 
 h4 {
     margin-left: 2rem;
+}
+
+.footer-home {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    position: relative;
+    left: 0;
+    bottom: 0;
 }

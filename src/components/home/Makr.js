@@ -8,7 +8,7 @@ import './Makr.css'
 export const Makr = () => {
     
     return (
-        <>
+        <main>
             <header></header>
             <section className="home-header">
                 <p>Welcome to Makr </p>
@@ -18,10 +18,10 @@ export const Makr = () => {
                 <h4>Meet the Pros</h4>
                 <ProList/>
             </section>
-            <footer>
-                
+            <footer className="footer-home">
+                <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1663639606/Screen_Shot_2022-09-19_at_9.05.23_PM-removebg-preview_cvnxt3.png' alt="Home" className="footer-image"></img>
             </footer>
-        </>
+        </main>
         
     )
 }

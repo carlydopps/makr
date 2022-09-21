@@ -8,6 +8,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { getCurrentPro, getCurrentUser, getExpertiseTypes, saveEditedPro, saveEditedUser } from "../ApiManager"
+import { Footer } from "../footer/Footer"
 import "./Account.css"
 
 export const Account = () => {
@@ -269,6 +270,7 @@ export const Account = () => {
                     : defaultDisplay()
                 }
             </section>
+            <Footer/>
         </>
     )
 }

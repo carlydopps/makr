@@ -8,6 +8,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import { getCurrentUser, getSelectedPro, postProject } from "../ApiManager"
 import "./ProjectForm.css"
 import { Image } from 'cloudinary-react'
+import { Footer } from "../footer/Footer"
 
 export const ProjectForm = () => {
 
@@ -83,7 +84,7 @@ export const ProjectForm = () => {
             widget.open()
     }
 
-    return (
+    return <>
         <form className="projectForm">
             <h2 className="projectForm__title">New Project Request</h2>
             <p>User: {user.name}</p>
@@ -154,6 +155,7 @@ export const ProjectForm = () => {
                 className="btn__submit"
                 >Submit Request</button>
         </form>
-    )
+        <Footer/>
+    </>
     
 }

@@ -1,3 +1,4 @@
+import { Footer } from "../footer/Footer"
 import { ProjectListMakr } from "./ProjectListMakr"
 import { ProjectListPro } from "./ProjectListPro"
 
@@ -19,5 +20,6 @@ export const ProjectList = () => {
                     </ul>
                 </div>
             </section>
+        <Footer/>
     </>
 }

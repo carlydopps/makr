@@ -3,6 +3,7 @@
 // User can click a button to start creating that will take them to the home page
 
 import { useNavigate } from "react-router-dom"
+import { Footer } from "../footer/Footer"
 
 export const LandingPage = () => {
 
@@ -12,6 +13,7 @@ export const LandingPage = () => {
         <>
                 <h2>Welcome to Makr Landing Page</h2>
                 <button onClick={() => navigate("/home")}>Start creating</button>
+                <Footer/>
         </>
     )
 }
