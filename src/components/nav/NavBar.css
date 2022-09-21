@@ -1,13 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400;700&display=swap');
 
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem;
+    width: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
 .navbar__button {
     font-family: 'BenchNine', sans-serif;
     font-size: medium;
     border: none;
     border-radius: 10%;
     background-color: white;
-    height: 3rem;
-    width: 7rem;
+    height: 4rem;
+    width: 9rem;
     padding: 0.4rem;
     margin: 1rem;
 }
@@ -16,7 +30,6 @@
     border-radius: 100%;
     height: 3.5rem;
     width: 3.5rem;
-    justify-items: center;
     padding: 0;
 }
 
