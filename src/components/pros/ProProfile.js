@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { getSelectedPro } from "../ApiManager"
+import { Footer } from "../footer/Footer"
 import { ProjectForm } from "../projects/ProjectForm"
 
 export const ProProfile = () => {
@@ -51,6 +52,6 @@ export const ProProfile = () => {
                 <p>{pro.experience} years of experience</p>
             </div>
         </section>
-        <footer></footer>
+        <Footer/>
     </>
 }

@@ -7,6 +7,7 @@ import { React, useEffect, useState } from "react"
 import { useNavigate } from "react-router"
 import { Link } from "react-router-dom"
 import { checkEmail, getExpertiseTypes, postPro, postUser } from "../ApiManager"
+import { Footer } from "../footer/Footer"
 
 export const Register = () => {
 
@@ -276,5 +277,6 @@ export const Register = () => {
                 <Link to="/login">Already have an account?</Link>
             </section>
         </main>
+        <Footer/>
     </>
 }

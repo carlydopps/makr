@@ -5,6 +5,7 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router"
 import { Link } from "react-router-dom"
+import { Footer } from "../footer/Footer"
 import "./Auth.css"
 
 export const Login = () => {
@@ -63,5 +64,6 @@ export const Login = () => {
                 <Link to="/register">Register</Link>
             </section>
         </main>
+        <Footer/>
     </>
 }
