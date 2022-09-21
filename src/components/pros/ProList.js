@@ -5,9 +5,10 @@ import { useNavigate } from "react-router-dom"
 import { getProsData } from "../ApiManager"
 import "./ProList.css"
 
-export const ProList = () => {
+export const ProList = ({searchTermState}) => {
 
     const [pros, setPros] = useState([])
+    const [filteredPros, setFilteredPros] = useState([])
     const navigate = useNavigate()
 
     useEffect(
@@ -18,9 +19,26 @@ export const ProList = () => {
         []
     )
 
+    useEffect(
+        () => {
+            setFilteredPros(pros)
+        },
+        [pros]
+    )
+
+    useEffect(
+        () => {
+            const searchedPros = pros.filter(pro => {
+                return pro.expertiseType.name.toLowerCase().startsWith(searchTermState.toLowerCase())
+            })
+            setFilteredPros(searchedPros)
+        },
+        [searchTermState]
+    )
+
     return <section className="list__pros">
         {
-            pros.map(pro => {
+            filteredPros.map(pro => {
                 return <div key={`pro--${pro.id}`}>
                     <button onClick={() => navigate(`/profile/${pro.id}`)} className="button__pro">
                         <img src={pro.user.profileImage} alt="Profile Image" className="profileImage-pro"/>
