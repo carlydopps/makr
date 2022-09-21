@@ -9,11 +9,10 @@ export const Makr = () => {
     
     return (
         <main>
-            <header></header>
-            <section className="home-header">
+            <header className="home-header">
                 <p>Welcome to Makr </p>
                 <p className="home-summary">a platform that helps the makers, the creators, and the DIYers accomplish more with personalized expert guidance</p>
-            </section>
+            </header>
             <section className="pro-summary">
                 <h4>Meet the Pros</h4>
                 <ProList/>
