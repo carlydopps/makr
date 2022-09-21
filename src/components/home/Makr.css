@@ -1,19 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400;700&display=swap');
  
-*{
+/* *{
 	Border: 1px dotted black;
+} */
+
+html {
+    background-image: url("https://res.cloudinary.com/dupram4w7/image/upload/v1663735060/background-orange_eim5i8.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 main {
-    min-height: calc(100vh - 10rem)
+    min-height: calc(100vh - 10rem);
+    
 }
 
 .home-header {
     font-family: 'BenchNine', sans-serif;
     font-weight: 700;
     font-size: xx-large;
-    margin: 0;
-    padding: 2rem;
+    margin: 0 0 10rem 0;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -41,6 +49,7 @@ h4 {
 .footer-home {
     display: flex;
     justify-content: center;
+    background-color: #FF9659;
     padding: 3rem;
     position: relative;
     left: 0;
