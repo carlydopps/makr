@@ -24,6 +24,13 @@ export const AccountNav = ({user}) => {
         setOpen(true)
     }
 
+    const handleLogout = () => {
+        setAnchorEl(null)
+        setOpen(false)
+        localStorage.removeItem("current_user")
+        navigate("/", {replace: true})
+    }
+
     return <>
         <button 
             aria-controls="simple-menu"
@@ -49,11 +56,7 @@ export const AccountNav = ({user}) => {
                         to={`/projects`}
                         className="accountnav-menu menu-projects">Projects</MenuItem>
                     <MenuItem 
-                        onClick={() => {
-                            handleClose()
-                            localStorage.removeItem("current_user")
-                            navigate("/welcome", {replace: true})
-                        }} 
+                        onClick={handleLogout} 
                         className="accountnav-menu menu-logout">Logout</MenuItem>
         </Menu>
     </>
