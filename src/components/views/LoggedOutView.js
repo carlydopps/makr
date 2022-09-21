@@ -10,23 +10,15 @@ import { Authorized } from "./Authorized"
 import { LoggedInView } from "./LoggedInView"
 
 export const LoggedOutView = () => {
-    return <>
-    <Routes>
-        <Route path="login" element={<Login/>}/>
-        <Route path="register" element={<Register/>}/>
-        <Route path="*" element={
-                <>
-                    <LoggedOutNav/>
-                    <LandingPage/>
-                    <Outlet/>
-                    <Routes>
-                        <Route path="/home" element={<Makr/>}/>
-                        <Route path="profile/:proId" element={<ProProfile/>}/>
-                        <Route path="project-form/:proId" element={<ProjectForm/>}/>
-                    </Routes>
-                    
-                </>
+    return <Routes>
+        <Route path="/" element={
+            <>
+                <LandingPage/>
+                <Outlet/>
+            </>
         }/>
+        <Route path="/home" element={<Makr/>}/>
+        <Route path="profile/:proId" element={<ProProfile/>}/>
+        <Route path="project-form/:proId" element={<ProjectForm/>}/>
     </Routes>
-    </>
 }

@@ -185,7 +185,12 @@ export const Register = () => {
 
     }
 
-    return (
+    return <>
+        <section>
+                <button onClick={() => navigate(`/home`)} className="navbar__button navbar__home">
+                        <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1663639606/Screen_Shot_2022-09-19_at_9.05.23_PM-removebg-preview_cvnxt3.png' alt="Home" className="home-image"></img>
+                </button>
+        </section>
         <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="h3 mb-3 font-weight-normal">Please Register for Makr</h1>
@@ -271,5 +276,5 @@ export const Register = () => {
                 <Link to="/login">Already have an account?</Link>
             </section>
         </main>
-    )
+    </>
 }
