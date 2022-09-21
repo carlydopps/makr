@@ -52,7 +52,7 @@ export const AccountNav = ({user}) => {
                         onClick={() => {
                             handleClose()
                             localStorage.removeItem("current_user")
-                            navigate("/", {replace: true})
+                            navigate("/welcome", {replace: true})
                         }} 
                         className="accountnav-menu menu-logout">Logout</MenuItem>
         </Menu>

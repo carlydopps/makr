@@ -33,11 +33,15 @@ export const Login = () => {
             })
     }
 
-    return (
+    return <>
+        <section>
+                <button onClick={() => navigate(`/home`)} className="navbar__button navbar__home">
+                        <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1663639606/Screen_Shot_2022-09-19_at_9.05.23_PM-removebg-preview_cvnxt3.png' alt="Home" className="home-image"></img>
+                </button>
+        </section>
         <main className="container--login">
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Makr</h1>
                     <h2>Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
@@ -59,5 +63,5 @@ export const Login = () => {
                 <Link to="/register">Register</Link>
             </section>
         </main>
-    )
+    </>
 }

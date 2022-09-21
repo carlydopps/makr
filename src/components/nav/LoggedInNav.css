@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400;700&display=swap');
 
-.navbar {
+.navbar-in {
     display: flex;
     justify-content: flex-start;
     padding: 1rem;
