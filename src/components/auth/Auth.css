@@ -1,9 +1,51 @@
-.btn {
+.btn-login, .btn-register {
     border-color: #FF9559;
-    border-radius: 10%;
     background-color: #FF9559;
-    height: 2rem;
+    height: 2.5rem;
     width: 7rem;
     padding: 0.4rem;
     margin: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.container-auth {
+    width: 25rem;
+    height: auto;
+    margin: auto 2rem auto 2rem;
+    text-align: center;
+    padding: 5rem;
+    background-color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.auth-header {
+    padding: 1rem;
+}
+
+.input-accountType{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-register, .container-login {
+    display: flex;
+    height: auto;
+    width: 60rem;
+    margin: 5rem auto 10rem auto;
+    justify-content: center;
+    align-self: center;
+    border: 0.2rem solid rgba(211, 211, 211, 0.685);
+}
+
+.img-register{
+    width: 30rem;
+    height: 40rem;
+    align-self: center;
+}
+
+.img-container-register {
+    background-color: #2F3F54;
+    margin: 0;
+    padding: 0;
 }

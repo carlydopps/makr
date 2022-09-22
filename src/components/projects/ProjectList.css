@@ -1,0 +1,24 @@
+.projects {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.projects-list {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.menu-listType {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-listType {
+    background-color: transparent;
+    border: none;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0.2rem 0.2rem rgba(211, 211, 211, 0.496);
+}

@@ -1,5 +1,52 @@
+.main-account {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://res.cloudinary.com/dupram4w7/image/upload/v1663809675/Re-Love_Project_before_after_pqmcgf.jpg");
+    background-size: 38rem;
+    background-repeat: no-repeat;
+    background-position: relative;
+}
+
 .image-profile {
     height: 5rem;
     width: 5rem;
     border-radius: 100%;
+    margin: 9.5rem 0 4rem 5rem;
+    align-self: flex-start;
+}
+
+.header-account {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.body-account {
+    justify-content: center;
+    margin-bottom: 3rem;
+    padding: 3rem;
+}
+
+.h1-account, .body-contact {
+    padding: 2rem;
+    padding: 2rem;
+}
+
+.btn-editProfile, .btn-accountSave, .btn-accountCancel {
+    border-color: #FF9559;
+    background-color: #FF9559;
+    height: 2.5rem;
+    width: 11rem;
+    padding: 0.4rem;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-accountPhoto {
+    background-color: #547095;
 }

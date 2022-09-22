@@ -1,0 +1,17 @@
+.carousel-item {
+    width: 100%;
+}
+
+.carousel-item.active {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.img-carousel {
+    width: 85%;
+    height: auto;
+    margin: 2rem;
+}

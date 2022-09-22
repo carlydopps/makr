@@ -5,17 +5,18 @@
 import { ProContainer } from "../pros/ProContainer"
 import { ProList } from "../pros/ProList"
 import './Makr.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ImageCarousel } from "../ImageCarousel";
 
 export const Makr = () => {
     
     return (
-        <main>
-            <header className="home-header">
-                <p>Welcome to Makr </p>
-                <p className="home-summary">a platform that helps the makers, the creators, and the DIYers accomplish more with personalized expert guidance</p>
-            </header>
+        <main className="main-home">
+            <section className="carousel">
+                <ImageCarousel/>
+            </section>
             <section className="pro-summary">
-                <h4>Meet the Pros</h4>
+                <h2 className="h2-home">Meet the Pros</h2>
                 <ProContainer/>
             </section>
             <footer className="footer-home">

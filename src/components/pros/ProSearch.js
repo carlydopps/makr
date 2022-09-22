@@ -1,10 +1,10 @@
 export const ProSearch = ({setterFunction}) => {
     return (
-        <div>
+        <div className="search-pro">
             <input onChange={(event) => {
                 setterFunction(event.target.value)
             }}
-            type="text" placeholder="Enter project type"/>
+            type="text" placeholder="Enter project type" className="input-search" autofocus/>
         </div>
     )
 }

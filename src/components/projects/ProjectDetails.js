@@ -98,7 +98,7 @@ export const ProjectDetails = () => {
             <article>
                 <h4>Description</h4>
                 <p>{project.description}</p> 
-                <img src={project.image} className="image"></img>
+                <img src={project.image} className="image-project"></img>
             </article>
             <article>
                 <h4>Scheduled Time</h4>

@@ -5,10 +5,12 @@
     width: auto;
     align-items: center;
     justify-content: space-between;
+    background-color: #FF9659;
+    position: relative;
+    z-index: 3;
 }
 
 .navbar-button {
-    font-family: 'BenchNine', sans-serif;
     font-size: medium;
     border: none;
     border-radius: 10%;

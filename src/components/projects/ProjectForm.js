@@ -141,7 +141,7 @@ export const ProjectForm = () => {
             <section>
                 {
                     project.image !== ""
-                    ? <img src={project.image} alt="" className="image"/>
+                    ? <img src={project.image} alt="" className="image-projectForm"/>
                     : ""
                 }
                 
