@@ -112,9 +112,9 @@ export const Register = () => {
 
     const proDisplay = () => {
         
-        return <form>
+        return <form className="form-register">
             <fieldset>
-                    <label htmlFor="aboutMe"> About Me: </label>
+                    <label htmlFor="aboutMe"></label>
                     <input
                         required
                         type="text" 
@@ -131,7 +131,7 @@ export const Register = () => {
                         } />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="expertise"> Expertise: </label>
+                    <label htmlFor="expertise"></label>
                     <select
                         onChange={
                             (event) => {
@@ -139,8 +139,11 @@ export const Register = () => {
                                 copy.expertiseTypeId = parseInt(event.target.value)
                                 updatePro(copy)
                             }
-                        }>
-                            <option value={0}>Select expertise</option>
+                        }
+                        className="form-control">
+                            <option value={0}
+                                className="form-control">
+                                Select expertise</option>
                             {
                                 expertiseTypes.map(expertise => <option
                                 key={expertise.id}
@@ -150,7 +153,7 @@ export const Register = () => {
                     </select>
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="price"> Price: </label>
+                    <label htmlFor="price"> Hourly Rate: </label>
                     <input 
                         required
                         type="text" 
@@ -166,7 +169,7 @@ export const Register = () => {
                         }/>
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="experience"> Years of Experience: </label>
+                    <label htmlFor="experience"></label>
                     <input
                         required
                         type="number" 
@@ -192,11 +195,15 @@ export const Register = () => {
                         <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1663639606/Screen_Shot_2022-09-19_at_9.05.23_PM-removebg-preview_cvnxt3.png' alt="Home" className="home-image"></img>
                 </button>
         </section>
-        <main style={{ textAlign: "center" }}>
+        <main style={{ textAlign: "center" }} className="container-register">
+            <section className="container-auth">
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for Makr</h1>
+                <section className="auth-header">
+                    <h2 className="h3 mb-3 font-weight-normal">Welcome to Makr</h2>
+                </section>
+                
                 <fieldset>
-                    <label htmlFor="name"> Full Name </label>
+                    <label htmlFor="name"></label>
                     <input 
                         required autoFocus
                         type="text" 
@@ -213,7 +220,7 @@ export const Register = () => {
                         }/>
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="email"> Email address </label>
+                    <label htmlFor="email"></label>
                     <input 
                         required
                         type="text" 
@@ -230,7 +237,7 @@ export const Register = () => {
                         }/>
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="phone"> Phone Number </label>
+                    <label htmlFor="phone"></label>
                     <input 
                         required
                         type="tel" 
@@ -243,7 +250,7 @@ export const Register = () => {
                             (event) => {handlePhoneInput(event)}
                         }/>
                 </fieldset>
-                <fieldset>
+                <fieldset className="input-accountType">
                     <label htmlFor="accountType"></label>
                     <input 
                         onChange={(evt) => {
@@ -270,11 +277,15 @@ export const Register = () => {
             <button 
                 onClick={event => handleRegister(event)}
                 type="register" 
-                className="btn btn__register"> Register
+                className="btn-register"> Register
                 
             </button>
             <section className="link--login">
                 <Link to="/login">Already have an account?</Link>
+            </section>
+            </section>
+            <section className="img-container-register">
+                <img src="https://res.cloudinary.com/dupram4w7/image/upload/v1663819821/Registration_page_gh48qi.png" className="img-register"/>
             </section>
         </main>
         <Footer/>

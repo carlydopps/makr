@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Footer } from "../footer/Footer"
 import { ProjectListMakr } from "./ProjectListMakr"
 import { ProjectListPro } from "./ProjectListPro"
+import "./ProjectList.css"
 
 export const ProjectList = () => {
 
@@ -12,8 +13,16 @@ export const ProjectList = () => {
 
     return <>
         <h2>My Projects</h2>
-        <section>
-            <div>
+        <main className="projects">
+            {
+                currentUser.isPro
+                ? <aside className="menu-listType">
+                    <button onClick={() => setProjectType("pro")} className="button-listType">Pro Projects</button>
+                    <button onClick={() => setProjectType("makr")} className="button-listType">Makr Projects</button>
+                </aside>
+                : ""
+            }
+            <section className="projects-list">
                 <ul>
                 {
                     currentUser.isPro
@@ -21,16 +30,9 @@ export const ProjectList = () => {
                     : <ProjectListMakr userId={currentUser.id}/>
                 }
                 </ul>
-            </div>
-        </section>
-        {
-            currentUser.isPro
-            ? <aside className="menu-listType">
-                <button onClick={() => setProjectType("pro")}>Pro Projects</button>
-                <button onClick={() => setProjectType("makr")}>Makr Projects</button>
-            </aside>
-            : ""
-        }
+            </section>
+            
+            </main>
         <Footer/>
     </>
 }

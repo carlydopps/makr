@@ -103,7 +103,7 @@ export const Account = () => {
     const defaultDisplay = () => {
 
         return <>
-            <section>
+            <section className="body-contact">
                 <h3>Contact Information</h3>
                 <p>Email: {user.email}</p>
                 <p>Phone: {`(${user.phone.slice(0,3)}) ${user?.phone?.slice(3, 6)}-${user.phone.slice(6,10)}`}</p>
@@ -111,7 +111,7 @@ export const Account = () => {
                 {
                     currentUser.isPro
                     ? <section>
-                        <h2>Professional Details</h2>
+                        <h3>Professional Details</h3>
                         <p>About Me: {pro.aboutMe}</p>
                         <p>Expertise: {pro.expertiseType?.name}</p>
                         <p>Hourly Rate: {pro.price.toLocaleString(`en-US`, {style: 'currency', currency: 'USD'})}</p>
@@ -120,16 +120,17 @@ export const Account = () => {
                     : ""
                     
                 }
-                <button onClick={() => updateClickStatus(true)}>Edit Profile</button>
+                <button onClick={() => updateClickStatus(true)} className="btn-editProfile">Edit Profile</button>
             </section>
         </>
     }
 
     const editDetails = () => {
-        return <form className="accountForm">
+        return <section className="body-contact">
+        <form className="accountForm">
         <h2 className="accountForm__title">Edit Profile Information</h2>
         <button onClick={(event) => showWidget(event)}
-                    className="cloudinary-button">
+                    className="btn-accountPhoto">
                     Update photo
                 </button>
         <fieldset>
@@ -138,7 +139,7 @@ export const Account = () => {
                 <input
                     required autoFocus
                     type="text"
-                    className="email__update"
+                    className="form-control"
                     placeholder={user.email}
                     value={user.email}
                     onChange={
@@ -155,7 +156,7 @@ export const Account = () => {
                 <label htmlFor="phone">Phone Number: </label>
                 <input 
                     type="text"
-                    className="phone__update"
+                    className="form-control"
                     placeholder={user.phone}
                     value={user.phone}
                     onChange={
@@ -195,13 +196,14 @@ export const Account = () => {
                                 const copy = {...pro}
                                 copy.expertiseTypeId = parseInt(event.target.value)
                                 updatePro(copy)
-                            }
-                        }>
+                            }}
+                        className="form-control">
                             <option value={pro.expertiseTypeId}>{pro.expertiseType.name}</option>
                             {
                                 expertiseTypes.map(expertise => <option
                                 key={expertise.id}
-                                value={expertise.id}>
+                                value={expertise.id}
+                                className="form-control">
                                 {expertise.name}</option>)
                             }
                     </select>
@@ -244,33 +246,31 @@ export const Account = () => {
         }
         <button 
             onClick={(event) => handleSave(event)}
-            className="btn btn-primary">
+            className="btn-accountSave">
             Save
         </button>
         <button 
             onClick={(event) => handleCancel(event)}
-            className="btn btn-primary">
+            className="btn-accountCancel">
             Cancel
         </button>
     </form>
+    </section>
     }
 
 
-    return (
-        <>
-            <header>
-                <img src={user.profileImage} className="image-profile"/>
-                <h1>Hi, {firstName}!</h1>
-            </header>
-            
-            <section>
+    return <>
+        <main className="main-account">
+            <img src={user.profileImage} className="image-profile"/>
+            <section className="body-account">
+                <h1 className="h1-account">Hi, {firstName}!</h1>
                 {
                     clickStatus
                     ? editDetails()
                     : defaultDisplay()
                 }
             </section>
-            <Footer/>
-        </>
-    )
+        </main>
+        <Footer/>
+    </>
 }

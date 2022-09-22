@@ -1,0 +1,52 @@
+.main-landing {
+    width: 100%;
+    height: 100vh;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-landing {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.overlay {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 49, 48, 0.403);
+}
+
+.h1-landing {
+    font-size: xx-large;
+}
+
+.btn-create {
+    padding: 1rem;
+    border-radius: 25%;
+    color: whitesmoke;
+    background-color: rgb(231, 134, 78);
+    border: none;
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #ff9558ab;
+}
+
+.landing-summary {
+    font-weight: 400;
+    width: 50rem;
+    font-size: x-large;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
