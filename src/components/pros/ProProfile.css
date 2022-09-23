@@ -12,7 +12,7 @@
 .details-profile {
     display: flex;
     justify-content: space-evenly;
-    margin: 10rem auto;
+    margin: 10rem auto 6rem auto;
     width: 90rem;
     height: 30rem;
     color: rgb(71, 71, 71); 
@@ -86,4 +86,16 @@
     text-align: center;
     border-radius: 1.25rem;
     color: white;
+}
+
+.profile-photoCollage{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
+.profile-collage-image {
+    height: 20rem;
+    width: 20rem;
 }

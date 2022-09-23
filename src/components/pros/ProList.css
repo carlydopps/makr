@@ -1,12 +1,12 @@
 .button__pro {
-    color: white;
+    color: rgb(71, 71, 71);
     border: 0.1rem solid whitesmoke;
     background-color: white;
     padding: 1rem;
     border-radius: 5%;
-    margin: 1rem;
-    width: 16rem;
-    height: 23rem;
+    margin: 2rem;
+    width: 18rem;
+    height: 24rem;
     box-shadow: 0.5rem 0.2rem rgba(227, 227, 227, 0.694);
 }
 
@@ -20,8 +20,8 @@
 }
 
 .profileImage-pro {
-    width: 10rem;
-    height: 10rem;
+    width: 11rem;
+    height: 11rem;
     margin-left: auto;
     margin-right: auto;
 }

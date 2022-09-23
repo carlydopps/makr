@@ -59,11 +59,12 @@
 .details-project_descriptionBody{
     display: flex;
     height: 5rem;
-    width: 100%;
+    width: 30rem;
     justify-content: left;
     text-align: left;
     padding: 0;
-    white-space: nowrap;
+    word-wrap: break-word;
+    white-space: wrap;
     overflow: scroll;
     text-overflow: ellipsis;
 }
@@ -86,6 +87,7 @@
 .details-project_imageProfile{
     width: 7rem;
     height: 7rem;
+    border-radius: 100%;
 }
 
 .details-project_schedule {
@@ -105,4 +107,8 @@
     text-align: center;
     border-radius: 1.25rem;
     color: white;
+}
+
+.profile-photoCollage {
+    
 }

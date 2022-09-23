@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
-import { getSelectedPro } from "../ApiManager"
+import { getImages, getSelectedPro } from "../ApiManager"
 import { Footer } from "../footer/Footer"
 import { ProjectForm } from "../projects/ProjectForm"
 import './ProProfile.css'
@@ -9,6 +9,7 @@ export const ProProfile = () => {
 
     const {proId} = useParams()
     const [pro, updatePro] = useState([])
+    const [images, setImages] = useState([])
 
     const localUser = localStorage.getItem("current_user")
     const currentUser = JSON.parse(localUser)
@@ -21,6 +22,11 @@ export const ProProfile = () => {
                     const selectedPro = data[0]
                     updatePro(selectedPro)
                 })
+            
+            getImages(proId)
+                .then((data) => setImages(data))
+
+            window.scrollTo(0, 0)
         },
         [proId]
     )
@@ -55,6 +61,13 @@ export const ProProfile = () => {
                         : false}>Book a Session</button>
                     : <button onClick={() => navigate('/login')}>Login to book</button>
                 }
+        </section>
+        <section className="profile-photoCollage">
+            {
+                images.map((image) => {
+                    return <img src={image.image} className="profile-collage-image"/>
+                })
+            }
         </section>
     </main>
     <Footer/>

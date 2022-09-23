@@ -27,6 +27,9 @@ export const ProjectDetails = () => {
                     const selectedProject = data[0]
                     updateProject(selectedProject)
                 })
+            
+            window.scrollTo(0, 0)
+
         },
         [projectId]
     )
@@ -92,10 +95,12 @@ export const ProjectDetails = () => {
                             <img src={makr?.profileImage} className="details-project_imageProfile"/>
                         </>
                         : <>
-                        <p>Pro: 
-                                <Link to={`/profile/${pro?.id}`}>{pro?.user?.name}</Link>
+                        <p className="details-project_userInfo">
+                            Pro Details
+                                <Link to={`/profile/${pro?.id}`}
+                                >{pro?.user?.name}</Link>
                         </p>
-                        <img src={pro?.user?.profileImage}/>
+                        <img src={pro?.user?.profileImage} className="details-project_imageProfile"/>
                         </>
                     }
                     
