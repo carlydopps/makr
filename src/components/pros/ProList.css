@@ -1,13 +1,13 @@
 .button__pro {
-    color: black;
-    border: none;
-    background-color: rgba(132, 132, 152, 0.211);
+    color: white;
+    border: 0.1rem solid whitesmoke;
+    background-color: white;
     padding: 1rem;
     border-radius: 5%;
     margin: 1rem;
     width: 16rem;
     height: 23rem;
-    box-shadow: 0.5rem 0.5rem rgba(234, 229, 229, 0.493);
+    box-shadow: 0.5rem 0.2rem rgba(227, 227, 227, 0.694);
 }
 
 .list__pros {

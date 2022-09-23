@@ -32,29 +32,29 @@ export const ProProfile = () => {
 
     return <>
     <main className="main-profile">
-        <section className="header-profile">
-            <img src={pro.user?.profileImage} className="image-profileMain"/>
-            <h2>{pro.user?.name}</h2>
-            {
-                currentUser
-                ? <button onClick={() => navigate(`/project-form/${pro.id}`)}
-                className="btn__book" disabled={pro.userId === currentUser.id 
-                    ? true 
-                    : false}>Book a Session</button>
-                : <button onClick={() => navigate('/login')}>Login to book</button>
-            }
-            
-            
-        </section>
-        <section className="body-profile">
-            <div className="body-profile_info">
-                <p>{pro.expertiseType?.name}</p>
-                <p>{pro.price?.toLocaleString(`en-US`, {style: 'currency', currency: 'USD'})} / hr</p>
-                <p>{pro.experience} years of experience</p>
+        <section className="details-profile">
+            <div className="profile-image_frame">
+                <img src={pro.user?.profileImage} className="image-profileMain"/>
             </div>
-            <div className="body-profile_about">
-                <p>{pro.aboutMe}</p>
+            <div className="details-profile_info">
+                <h2>{pro.user?.name}</h2>
+                <div className="body-profile_info">
+                    <p>{pro.expertiseType?.name}</p>
+                    <p className="paragraph-center">{pro.price?.toLocaleString(`en-US`, {style: 'currency', currency: 'USD'})} / hr</p>
+                    <p>{pro.experience} years of experience</p>
+                </div>
+                <div className="body-profile_about">
+                    <p>{pro.aboutMe}</p>
+                </div>
             </div>
+                {
+                    currentUser
+                    ? <button onClick={() => navigate(`/project-form/${pro.id}`)}
+                    className="btn-book" disabled={pro.userId === currentUser.id 
+                        ? true 
+                        : false}>Book a Session</button>
+                    : <button onClick={() => navigate('/login')}>Login to book</button>
+                }
         </section>
     </main>
     <Footer/>

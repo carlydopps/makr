@@ -14,7 +14,7 @@ export const ProjectList = () => {
     return <>
         <main className="main-projects">
             
-            <h2 className="h2-project">My Projects</h2>
+            <h2 className="h2-project">Projects</h2>
             <div className="body-projects">
             {
                 currentUser.isPro
