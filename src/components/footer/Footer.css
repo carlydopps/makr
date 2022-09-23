@@ -3,10 +3,12 @@
     justify-content: center;
     padding: 3rem;
     position: relative;
+    margin-top: -10rem;
     left: 0;
     bottom: 0;
     right: 0;
     background-color: #324254;
+    height: 10rem;
 }
 
 .footer-image {

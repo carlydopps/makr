@@ -2,3 +2,107 @@
     height: 15rem;
     width: 15rem;
 }
+
+.page-project {
+    min-height: 100vh;
+    padding-bottom: 10rem;
+}
+
+.container-projectDetails {
+    margin: 10rem auto;
+    width: 60rem;
+    height: 30rem;
+    color: rgb(71, 71, 71);
+}
+
+.h1-projectDetails{
+    font-weight: bold;
+    padding-bottom: 1rem;
+    margin: 0;
+}
+
+.section-project {
+    display: flex;
+    height: 100%;
+}
+
+.details-project_user {
+    display: flex;
+    margin: 2rem 0;
+}
+
+.details-project_userName, .details-project_userPhone{
+    margin: 0;
+}
+
+.details-project_userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 10rem;
+}
+
+.details-project {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details-project_descriptionTitle{
+}
+
+.details-project_description {
+}
+
+.details-project_descriptionBody{
+    display: flex;
+    height: 5rem;
+    width: 100%;
+    justify-content: left;
+    text-align: left;
+    padding: 0;
+    white-space: nowrap;
+    overflow: scroll;
+    text-overflow: ellipsis;
+}
+
+.details-project_imageFrame {
+    border: 0.1rem solid lightgray;
+    border-radius: 15%;
+    box-shadow: 0.5rem 0.2rem lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-project_image{
+    height: 95%;
+    width: 95%;
+    padding: 3rem;
+}
+
+.details-project_imageProfile{
+    width: 7rem;
+    height: 7rem;
+}
+
+.details-project_schedule {
+    margin: 2rem 0;
+}
+
+
+
+.btn-return {
+    border-color: #FF9659;
+    background-color: #FF9659;
+    height: 3rem;
+    width: 13rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 1rem 1rem 0;
+    align-items: center;
+    text-align: center;
+    border-radius: 1.25rem;
+    color: whitesmoke;
+}

@@ -1,3 +1,8 @@
+.page-auth {
+    min-height: 100vh;
+    padding-bottom: 10rem;
+}
+
 .btn-login, .btn-register {
     border-color: #FF9559;
     background-color: #FF9559;
@@ -32,10 +37,10 @@
     display: flex;
     height: auto;
     width: 60rem;
-    margin: 5rem auto 10rem auto;
+    margin: 8% auto 8% auto;
     justify-content: center;
     align-self: center;
-    border: 0.2rem solid rgba(211, 211, 211, 0.685);
+    border: 0.2rem solid rgba(211, 211, 211, 0.685);    
 }
 
 .img-register{

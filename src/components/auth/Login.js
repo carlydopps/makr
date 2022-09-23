@@ -40,6 +40,7 @@ export const Login = () => {
                         <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1663639606/Screen_Shot_2022-09-19_at_9.05.23_PM-removebg-preview_cvnxt3.png' alt="Home" className="home-image"></img>
                 </button>
         </section>
+        <div className="page-auth">
         <main className="container-login">
             <section className="container-auth">
                 <form className="form--login" onSubmit={handleLogin}>
@@ -68,6 +69,7 @@ export const Login = () => {
                 <img src="https://res.cloudinary.com/dupram4w7/image/upload/v1663819821/Registration_page_gh48qi.png" className="img-register"/>
             </section>
         </main>
+        </div>
         <Footer/>
     </>
 }

@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom"
 import { getSelectedPro } from "../ApiManager"
 import { Footer } from "../footer/Footer"
 import { ProjectForm } from "../projects/ProjectForm"
+import './ProProfile.css'
 
 export const ProProfile = () => {
 
@@ -30,8 +31,9 @@ export const ProProfile = () => {
     }
 
     return <>
-        <header></header>
-        <section>
+    <main className="main-profile">
+        <section className="header-profile">
+            <img src={pro.user?.profileImage} className="image-profileMain"/>
             <h2>{pro.user?.name}</h2>
             {
                 currentUser
@@ -44,14 +46,17 @@ export const ProProfile = () => {
             
             
         </section>
-        <section>
-            <div>
+        <section className="body-profile">
+            <div className="body-profile_info">
                 <p>{pro.expertiseType?.name}</p>
                 <p>{pro.price?.toLocaleString(`en-US`, {style: 'currency', currency: 'USD'})} / hr</p>
-                <p>{pro.aboutMe}</p>
                 <p>{pro.experience} years of experience</p>
             </div>
+            <div className="body-profile_about">
+                <p>{pro.aboutMe}</p>
+            </div>
         </section>
-        <Footer/>
+    </main>
+    <Footer/>
     </>
 }

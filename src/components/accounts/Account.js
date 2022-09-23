@@ -261,7 +261,10 @@ export const Account = () => {
 
     return <>
         <main className="main-account">
-            <img src={user.profileImage} className="image-profile"/>
+            <div className="image-stack">
+                <img src="https://res.cloudinary.com/dupram4w7/image/upload/v1663809675/Re-Love_Project_before_after_pqmcgf.jpg" className="image-stack_bottom"/>
+                <img src={user.profileImage} className="image-stack_top"/>
+            </div>
             <section className="body-account">
                 <h1 className="h1-account">Hi, {firstName}!</h1>
                 {

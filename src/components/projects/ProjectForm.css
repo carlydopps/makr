@@ -1,14 +1,61 @@
-.btn__submit {
-    border-color: #FF9559;
-    border-radius: 10%;
-    background-color: #FF9559;
-    height: 2rem;
-    width: 7rem;
-    padding: 0.4rem;
-    margin: 1rem;
+.page-form {
+    min-height: 100vh;
+    padding-bottom: 10rem;
+}
+
+.btn__submit, .cloudinary-button {
+    border-color: #FF9659;
+    background-color: #FF9659;
+    height: 3rem;
+    width: 9rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 1rem 1rem 0;
+    align-items: center;
+    text-align: center;
+    border-radius: 1.25rem;
+    color: whitesmoke;
+}
+.cloudinary-button {
+    background-color: #94da9a;
+    border-color: #94da9a;
 }
 
 .image-projectForm {
     height: 15rem;
     width: 15rem;
+}
+
+.container-projectForm {
+    display: flex;
+    height: 40.5rem;
+    width: 59rem;
+    margin: 8% auto 8% auto;
+    justify-content: center;
+    align-self: center;
+    border: 0.2rem solid rgba(211, 211, 211, 0.685);    
+}
+
+.form-projectRequest {
+    width: 25rem;
+    height: 40rem;
+    margin: auto 2rem auto 2rem;
+    text-align: center;
+    padding: 5rem;
+    background-color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.form-user, .form-pro {
+    text-align: left;
+}
+.img-container-form {
+    margin: 0;
+    padding: 0;
+}
+
+.img-form {
+    width: 30rem;
+    height: 40rem;
+    padding: 0;
+    align-self: center;
 }

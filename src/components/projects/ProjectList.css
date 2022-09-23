@@ -1,6 +1,9 @@
-.projects {
+.main-projects {
+    min-height: 100vh;
     display: flex;
     justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom: 10rem;
 }
 
 .projects-list {
@@ -8,11 +11,14 @@
     margin-left: auto;
     margin-right: auto;
     width: 70%;
+    padding: 1rem;
 }
 
 .menu-listType {
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
+    margin-left: 3rem;
 }
 
 .button-listType {
@@ -21,4 +27,104 @@
     padding: 1rem;
     margin: 1rem;
     box-shadow: 0.2rem 0.2rem rgba(211, 211, 211, 0.496);
+}
+
+.h2-project {
+    justify-content: center;
+    padding: 4rem;
+    color: whitesmoke;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-color: #FF9659;
+    border-bottom: 1rem solid #ffd0b5;
+}
+
+.h2-project_list {
+    margin-top: 4rem;
+    margin-left: 4rem;
+}
+
+.body-projects {
+    display: flex;
+    height: 100vh;
+}
+
+.btn-seePros {
+    border-color: #FF9659;
+    background-color: #FF9659;
+    height: 3.5rem;
+    width: 14rem;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    align-items: center;
+    text-align: center;
+    border-radius: 1.25rem;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.message-project {
+    margin: 1rem;
+}
+
+.image-projectPreview {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 1.25rem;
+}
+
+.btn-project_delete, .btn-project_view {
+    border-color: #3c4f65;
+    background-color: #577496;
+    height: 3rem;
+    width: 7rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 1rem 1rem 0;
+    align-items: center;
+    text-align: center;
+    border-radius: 1.25rem;
+    color: whitesmoke;
+}
+
+.btn-project_view {
+    width: 9rem;
+}
+
+.project-header {
+    display: flex;
+    justify-content: center;
+}
+
+.body-projectPreview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-details_title {
+    width: 14rem;
+    margin-top: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.project-details_date {
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.list-projectsDisplay {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto; 
+    justify-items: center;
+    margin: 3rem auto 3rem auto;
+    padding: 1rem;
+}
+
+.project {
+    width: 16rem;
+    height: 27rem;
 }
