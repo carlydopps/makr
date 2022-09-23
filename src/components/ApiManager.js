@@ -103,12 +103,12 @@ export const getSelectedProject = (projectId) => {
 }
 
 export const getMakrProjects = (userId) => {
-    return fetch(`http://localhost:8088/projects?userId=${userId}`)
+    return fetch(`http://localhost:8088/projects?_sort=date&userId=${userId}`)
         .then(res => res.json())
 }
 
 export const getProjects = () => {
-    return fetch(`http://localhost:8088/projects?_expand=pro`)
+    return fetch(`http://localhost:8088/projects?_sort=date&_expand=pro`)
         .then(res => res.json())
 }
 

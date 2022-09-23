@@ -6,6 +6,7 @@ import { Menu, MenuItem } from "@mui/material"
 import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { getCurrentUser } from "../ApiManager"
+import './AccountNav.css'
 
 export const AccountNav = ({user}) => {
 
@@ -43,12 +44,13 @@ export const AccountNav = ({user}) => {
                 anchorEl={anchorEl}
                 open={open}
                 onClose={handleClose}
+                className="menu-account"
                 >
                     <MenuItem 
                         onClick={handleClose}
                         component={Link}
                         to={`/account/${user.id}`}
-                        className="accountnav-menu menu-account">
+                        className="accountnav-menu">
                         Account</MenuItem>
                     <MenuItem 
                         onClick={handleClose}

@@ -1,0 +1,40 @@
+.main-profile {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 10rem;   
+    display: flex;
+    flex-direction: column;
+}
+
+.header-profile {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.image-profileMain {
+
+}
+
+.body-profile {
+    justify-content: center;
+    margin-bottom: 3rem;
+    padding: 3rem;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.body-profile_info {
+    color: whitesmoke;
+    background-color: #324254;
+}
+
+.body-profile_about {
+    font-size: larger;
+    padding: 2rem;
+}

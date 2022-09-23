@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { deleteProject, getAssignedMakr, getAssignedPro, getCurrentUser, getSelectedProject } from "../ApiManager"
+import { Footer } from "../footer/Footer"
 import "./ProjectDetails.css"
 
 export const ProjectDetails = () => {
@@ -50,12 +51,6 @@ export const ProjectDetails = () => {
         [project]
     )
 
-    const returnButton = () => {
-        return <button onClick={() => 
-            navigate(`/projects`)}
-            >Return to Project List</button>
-    }
-
     const formatDay = () => {
         return Date(project.date).toLocaleString('en-us', {weekday:'long'}).split(' ')[0]
         
@@ -76,39 +71,49 @@ export const ProjectDetails = () => {
     }
 
     return <>
-        <header>
-            <h1 className="projectDetails__header">{project.title}</h1>
-        </header>
-        <section>
-            {
-                user.isPro && user.id !== project.userId
-                ? <section>
-                    <p>Makr: {makr?.name}</p>
-                    <a href={`mailto:${makr?.email}`}>{makr?.email}</a>
-                    <p>{`(${makr?.phone?.slice(0,3)}) ${makr?.phone?.slice(3, 6)}-${makr?.phone?.slice(6,10)}`}</p>
-                </section>
-                : <section>
-                    <p>Pro: 
-                        <Link to={`/profile/${pro?.id}`}>{pro?.user?.name}</Link>
-                    </p>
-                </section>
-            }
+    <div className="page-project">
+    <main className="container-projectDetails">
+        <section className="section-project">
+            <section className="details-project">
+                <h4 className="h1-projectDetails">{project.title}</h4>
+                <article className="details-project_description">
+                    <p className="details-project_descriptionBody">{project.description}</p> 
+                </article>
+                <article className="details-project_user">
+                    {
+                        user.isPro && user.id !== project.userId
+                        ? <>
+                            <div className="details-project_userInfo">
+                                <h5 >Makr Details</h5>
+                                <p className="details-project_userName">{makr?.name}</p>
+                                <a href={`mailto:${makr?.email}`}>{makr?.email}</a>
+                                <p className="details-project_userPhone">{`(${makr?.phone?.slice(0,3)}) ${makr?.phone?.slice(3, 6)}-${makr?.phone?.slice(6,10)}`}</p>
+                            </div>
+                            <img src={makr?.profileImage} className="details-project_imageProfile"/>
+                        </>
+                        : <>
+                        <p>Pro: 
+                                <Link to={`/profile/${pro?.id}`}>{pro?.user?.name}</Link>
+                        </p>
+                        <img src={pro?.user?.profileImage}/>
+                        </>
+                    }
+                    
+                </article>
+                <article className="details-project_schedule">
+                    <h5>Session Details</h5>
+                    <p className="details-project_dateTime">{formatDay()} {formatDate()} at {formatTime()}</p> 
+                </article>    
+            </section>
+            <div className="details-project_imageFrame">
+                <img src={project.image} className="details-project_image"/>
+            </div>
         </section>
-        <section>
-            <article>
-                <h4>Description</h4>
-                <p>{project.description}</p> 
-                <img src={project.image} className="image-project"></img>
-            </article>
-            <article>
-                <h4>Scheduled Time</h4>
-                <p>{formatDay()} {formatDate()} at {formatTime()}</p> 
-            </article>    
-        </section>
-        {
-            returnButton()
-        }
-
-
+        <button onClick={() => navigate(`/projects`)}
+            className="btn-return"
+            >Return to Project List</button>
+    </main>
+    </div>
+    <Footer/>
     </>
 }

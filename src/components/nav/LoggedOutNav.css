@@ -7,7 +7,8 @@
     justify-content: space-between;
     background-color: #FF9659;
     position: relative;
-    z-index: 3;
+    z-index: 1001;
+    font-family: 'Unica One', cursive;
 }
 
 .navbar-button {
@@ -19,4 +20,5 @@
     width: 9rem;
     padding: 0.4rem;
     margin: 1rem;
+    font-size: 1.5rem;
 }

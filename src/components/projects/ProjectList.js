@@ -12,8 +12,10 @@ export const ProjectList = () => {
     const currentUser = JSON.parse(localUser)
 
     return <>
-        <h2>My Projects</h2>
-        <main className="projects">
+        <main className="main-projects">
+            
+            <h2 className="h2-project">My Projects</h2>
+            <div className="body-projects">
             {
                 currentUser.isPro
                 ? <aside className="menu-listType">
@@ -22,16 +24,14 @@ export const ProjectList = () => {
                 </aside>
                 : ""
             }
-            <section className="projects-list">
-                <ul>
-                {
-                    currentUser.isPro
-                    ? <ProjectListPro userId={currentUser.id} projectType={projectType}/>
-                    : <ProjectListMakr userId={currentUser.id}/>
-                }
-                </ul>
-            </section>
-            
+                <section className="projects-list">
+                    {
+                        currentUser.isPro
+                        ? <ProjectListPro userId={currentUser.id} projectType={projectType}/>
+                        : <ProjectListMakr userId={currentUser.id}/>
+                    }
+                </section>
+            </div>
             </main>
         <Footer/>
     </>

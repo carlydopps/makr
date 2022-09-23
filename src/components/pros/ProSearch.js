@@ -4,7 +4,7 @@ export const ProSearch = ({setterFunction}) => {
             <input onChange={(event) => {
                 setterFunction(event.target.value)
             }}
-            type="text" placeholder="Enter project type" className="input-search" autofocus/>
+            type="text" placeholder="Enter project type" className="input-search"/>
         </div>
     )
 }
