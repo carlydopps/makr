@@ -9,15 +9,31 @@
     flex-direction: column;
 }
 
-.header-profile {
+.details-profile {
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding: 2rem;
+    justify-content: space-evenly;
+    margin: 10rem auto;
+    width: 90rem;
+    height: 30rem;
+    color: rgb(71, 71, 71); 
+}
+
+.profile-image_frame {
+    border: 0.1rem solid lightgray;
+    border-radius: 15%;
+    box-shadow: 0.5rem 0.2rem lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    height: 25rem;
+    width: 25rem;
 }
 
 .image-profileMain {
-
+    height: 95%;
+    width: 95%;
+    padding: 3rem;
 }
 
 .body-profile {
@@ -29,12 +45,45 @@
     
 }
 
+.details-profile_info {
+    margin: 1rem;
+    width: 35rem;
+    padding-top: 1rem;
+}
+
 .body-profile_info {
     color: whitesmoke;
-    background-color: #324254;
+    display: flex;
+    justify-content: space-around;
+    color: rgb(71, 71, 71);
+    padding: 1rem 0;
+}
+
+.body-profile_info > p{
+    margin: 0;
 }
 
 .body-profile_about {
     font-size: larger;
-    padding: 2rem;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.paragraph-center {
+    padding: 0 3rem;
+    border-left: 0.1rem solid rgb(71, 71, 71);
+    border-right: 0.1rem solid rgb(71, 71, 71);
+}
+
+.btn-book {
+    border-color: #FF9659;
+    background-color: #FF9659;
+    height: 4rem;
+    width: 13rem;
+    padding: 1rem;
+    margin: 1rem;
+    align-items: center;
+    text-align: center;
+    border-radius: 1.25rem;
+    color: white;
 }

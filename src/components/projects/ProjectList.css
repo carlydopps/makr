@@ -4,6 +4,7 @@
     justify-content: flex-start;
     flex-direction: column;
     padding-bottom: 10rem;
+    color: rgb(71, 71, 71);
 }
 
 .projects-list {
@@ -74,8 +75,8 @@
 }
 
 .btn-project_delete, .btn-project_view {
-    border-color: #3c4f65;
-    background-color: #577496;
+    border-color: #FF9659;
+    background-color: #FF9659;
     height: 3rem;
     width: 7rem;
     padding: 0.5rem 1rem;
