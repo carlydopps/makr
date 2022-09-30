@@ -4,12 +4,17 @@
 }
 
 .page-project {
-    min-height: 100vh;
+    display: flex;
+    height: 100vh;
     padding-bottom: 10rem;
+    /* background-image: url("https://res.cloudinary.com/dupram4w7/image/upload/v1663735060/background-orange_eim5i8.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 10%; */
 }
 
 .container-projectDetails {
-    margin: 10rem auto;
+    margin: 7rem auto;
     width: 60rem;
     height: 30rem;
     color: rgb(71, 71, 71);
@@ -31,7 +36,7 @@
     margin: 2rem 0;
 }
 
-.details-project_userName, .details-project_userPhone{
+.details-project_userName, .details-project_userPhone, .details-project_userEmail{
     margin: 0;
 }
 
@@ -39,7 +44,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 10rem;
+    width: 11rem;
 }
 
 .details-project {
@@ -48,12 +53,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.details-project_descriptionTitle{
-}
-
-.details-project_description {
 }
 
 .details-project_descriptionBody{
@@ -71,16 +70,17 @@
 
 .details-project_imageFrame {
     border: 0.1rem solid lightgray;
-    border-radius: 15%;
+    border-radius: 10%;
     box-shadow: 0.5rem 0.2rem lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 
 .details-project_image{
-    height: 95%;
-    width: 95%;
+    height: 100%;
+    width: 100%;
     padding: 3rem;
 }
 
@@ -94,21 +94,41 @@
     margin: 2rem 0;
 }
 
+.details-project_approval button {
+    height: 3rem;
+    width: 7rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 1rem 1rem 0;
+    align-items: center;
+    text-align: center;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+}
 
+.button_approve {
+    border-color: #98DE9F;
+    background-color: #98DE9F;
+}
+
+.button_deny {
+    border-color: #324254;
+    background-color: #324254;
+}
 
 .btn-return {
     border-color: #FF9659;
     background-color: #FF9659;
     height: 3rem;
-    width: 13rem;
+    width: 14rem;
     padding: 0.5rem 1rem;
     margin: 1rem 1rem 1rem 0;
     align-items: center;
     text-align: center;
-    border-radius: 1.25rem;
+    border-radius: 1rem;
     color: white;
 }
 
 .profile-photoCollage {
-    
+
 }

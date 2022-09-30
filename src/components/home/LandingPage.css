@@ -19,6 +19,7 @@ video {
     justify-content: center;
     align-items: center;
     color: whitesmoke;
+    padding-top: 20rem;
 }
 
 .overlay {
@@ -29,7 +30,9 @@ video {
 }
 
 .h1-landing {
-    font-size: xx-large;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 1rem;
 }
 
 .btn-create {
@@ -39,14 +42,19 @@ video {
     background-color: rgb(231, 134, 78);
     border: none;
     box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #ff9558ab;
+    margin: 3rem;
 }
 
 .landing-summary {
     font-weight: 400;
     width: 50rem;
-    font-size: x-large;
+    font-size: 2rem;
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+
+.landing-summary_second{
+    font-size: 1.25rem;
 }

@@ -104,18 +104,37 @@ export const Account = () => {
 
         return <>
             <section className="body-contact">
-                <h3>Contact Information</h3>
-                <p>Email: {user.email}</p>
-                <p>Phone: {`(${user.phone.slice(0,3)}) ${user?.phone?.slice(3, 6)}-${user.phone.slice(6,10)}`}</p>
-                <p>Account Type: {currentUser.isPro ? "Pro" : "Makr"}</p>
+                <h4>Contact Information</h4>
+                <div className="body-contactLayout">
+                    <div className="body-contactLayout_titles">
+                        <p>Email:</p>
+                        <p>Phone:</p>
+                        <p>Account:</p>
+                    </div>
+                    <div className="body-contactLayout_info">
+                        <p>{user.email}</p>
+                        <p>{`(${user.phone.slice(0,3)}) ${user?.phone?.slice(3, 6)}-${user.phone.slice(6,10)}`}</p>
+                        <p>{currentUser.isPro ? "Pro" : "Makr"}</p>
+                    </div>
+                </div>
+                
                 {
                     currentUser.isPro
-                    ? <section>
-                        <h3>Professional Details</h3>
-                        <p>About Me: {pro.aboutMe}</p>
-                        <p>Expertise: {pro.expertiseType?.name}</p>
-                        <p>Hourly Rate: {pro.price.toLocaleString(`en-US`, {style: 'currency', currency: 'USD'})}</p>
-                        <p>Years of Experience: {pro.experience}</p>
+                    ? <section className="body-proDetails">
+                        <h4>Professional Details</h4>
+                        <p className="body-contactLayout_titles">{pro.aboutMe}</p>
+                        <div className="body-contactLayout">
+                            <div className="body-contactLayout_titles">
+                                <p>Expertise:</p>
+                                <p>Hourly Rate:</p>
+                                <p>Years of Experience:</p>
+                            </div>
+                            <div className="body-contactLayout_info">
+                                <p>{pro.expertiseType?.name}</p>
+                                <p>{pro.price.toLocaleString(`en-US`, {style: 'currency', currency: 'USD'})}</p>
+                                <p>{pro.experience}</p>
+                            </div>
+                        </div>
                     </section>
                     : ""
                     
@@ -128,7 +147,7 @@ export const Account = () => {
     const editDetails = () => {
         return <section className="body-contact">
         <form className="accountForm">
-        <h2 className="accountForm__title">Edit Profile Information</h2>
+        <h4 className="accountForm__title">Edit Profile Information</h4>
         <button onClick={(event) => showWidget(event)}
                     className="btn-accountPhoto">
                     Update photo

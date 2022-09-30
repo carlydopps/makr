@@ -88,6 +88,11 @@
     color: white;
 }
 
+.btn-book:disabled{
+    border: none;
+    background-color: lightgray;
+}
+
 .profile-photoCollage{
     display: grid;
     grid-template-columns: repeat(3, 1fr);

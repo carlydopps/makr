@@ -9,6 +9,7 @@
     justify-content: left;
     align-items: center;
     padding-bottom: 10rem;
+    font-family: 'Mulish', sans-serif;
 }
 
 .image-stack {
@@ -34,9 +35,26 @@
 
 .body-account {
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-top: 2.5rem;
+    margin-left: 3rem;
     padding: 3rem;
     width: 40rem;
+}
+
+.body-contact {
+    height: 40rem;
+}
+
+.body-contactLayout {
+    display: flex;
+}
+
+.body-contactLayout_titles {
+    padding: 1rem;
+}
+
+.body-contactLayout_info {
+    padding: 1rem 0;
 }
 
 .h1-account, .body-contact {
@@ -60,4 +78,12 @@
 .btn-accountPhoto {
     background-color: #94da9a;
     border-color: #94da9a;
+}
+
+.body-proDetails {
+    margin: 2rem 0;
+}
+
+p {
+    margin: 0;
 }

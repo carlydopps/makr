@@ -8,7 +8,7 @@
     background-color: #FF9659;
     position: relative;
     z-index: 1001;
-    font-family: 'Unica One', cursive;
+    font-family: 'Mulish', sans-serif;
 }
 
 .navbar-button {
@@ -20,5 +20,5 @@
     width: 9rem;
     padding: 0.4rem;
     margin: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }

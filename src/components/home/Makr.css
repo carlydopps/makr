@@ -37,9 +37,11 @@
     margin-top: 3rem;
     text-align: center;
     font-size: 4rem;
-    font-family: 'Unica One', cursive;
+    font-weight: 500;
+    font-family: 'Mulish', sans-serif;
     background-color: #ff9659e5;
     padding: 2rem;
+    color: #324254;
 }
 
 .footer-home {

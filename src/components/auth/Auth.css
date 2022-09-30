@@ -4,18 +4,20 @@
 }
 
 .btn-login, .btn-register {
-    border-color: #FF9559;
-    background-color: #FF9559;
-    height: 2.5rem;
+    border-color: #FF9659;
+    background-color: #FF9659;
+    height: 2.6rem;
     width: 7rem;
-    padding: 0.4rem;
-    margin: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 1rem 1rem 0;
     align-items: center;
     text-align: center;
+    border-radius: 1.25rem;
+    color: whitesmoke;
 }
 
 .container-auth {
-    width: 25rem;
+    width: 26rem;
     height: auto;
     margin: auto 2rem auto 2rem;
     text-align: center;
@@ -37,7 +39,7 @@
     display: flex;
     height: auto;
     width: 60rem;
-    margin: 8% auto 8% auto;
+    margin: 2% auto 8% auto;
     justify-content: center;
     align-self: center;
     border: 0.2rem solid rgba(211, 211, 211, 0.685);    

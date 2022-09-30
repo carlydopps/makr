@@ -54,5 +54,6 @@
     border: none;
     border-bottom: 0.2rem solid gray;
     box-shadow: 0.2rem 0.2rem rgba(211, 211, 211, 0.511);
-    margin: 5rem 8rem 2rem 0
+    margin: 5rem 8rem 2rem 0;
+    outline: none;
 }

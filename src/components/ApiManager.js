@@ -123,6 +123,18 @@ export const postProject = (project) => {
         .then(res => res.json())
 }
 
+export const saveProject = (project) => {
+    return fetch(`http://localhost:8088/projects/${project.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(project)
+    })
+        .then(res => res.json())
+}
+
+
 export const deleteProject = (projectId) => {
     return fetch(`http://localhost:8088/projects/${projectId}`, {
         method: "DELETE"
