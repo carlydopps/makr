@@ -18,7 +18,8 @@ export const LandingPage = () => {
             <video src="https://res.cloudinary.com/dupram4w7/video/upload/v1663793714/pexels-polina-kovaleva-5644324_cf0fws.mp4" autoPlay loop muted/>
             <div className="content-landing">
                 <h1 className="h1-landing">Welcome to Makr</h1>
-                <p className="landing-summary">where the makers, the creators, and the DIYers can accomplish more with personalized expert guidance</p>
+                <p className="landing-summary">where the makers, the creators, and the DIYers can create more with personalized expert guidance</p>
+                <p className="landing-summary_second">We provide expert guidance on demand so that pros are available to help when makrs need it most.</p>
                 <button onClick={() => navigate("/home")} className="btn-create">Start creating</button>
             </div>
         </main>

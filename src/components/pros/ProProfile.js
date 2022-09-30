@@ -59,7 +59,7 @@ export const ProProfile = () => {
                     className="btn-book" disabled={pro.userId === currentUser.id 
                         ? true 
                         : false}>Book a Session</button>
-                    : <button onClick={() => navigate('/login')}>Login to book</button>
+                    : <button onClick={() => navigate('/login')}className="btn-book">Login to book</button>
                 }
         </section>
         <section className="profile-photoCollage">

@@ -59,7 +59,8 @@ export const ProjectForm = () => {
             description: project.description,
             date: project.date,
             time: new Date(project.date).toLocaleTimeString('en-us'),
-            image: project.image
+            image: project.image,
+            status: "Pending"
         }
 
         postProject(newProject)

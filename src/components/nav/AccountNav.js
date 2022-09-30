@@ -36,7 +36,7 @@ export const AccountNav = ({user}) => {
         <button 
             aria-controls="simple-menu"
             aria-haspopup="true"
-            onClick={handleClick}className="navbar__button navbar__account">
+            onClick={handleClick}className="navbar__account">
             <img src={user?.profileImage} alt="Account" className="account-image"></img>
         </button>
         <Menu

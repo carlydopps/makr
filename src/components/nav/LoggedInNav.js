@@ -10,6 +10,7 @@ import "./LoggedInNav.css"
 export const LoggedInNav = () => {
 
     const [user, setUser] = useState({})
+    const [color, updateColor] = useState("#FF9659")
 
     const localUser = localStorage.getItem("current_user")
     const currentUser = JSON.parse(localUser)
@@ -29,7 +30,7 @@ export const LoggedInNav = () => {
 
     return (
         <section className="navbar-in">
-            <button onClick={() => navigate(`/`)} className="navbar__button navbar__home">
+            <button onClick={() => navigate(`/`)} className="navbar__home">
                 <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1663639606/Screen_Shot_2022-09-19_at_9.05.23_PM-removebg-preview_cvnxt3.png' alt="Home" className="home-image"></img>
             </button>
             <section className="navbar-right">
