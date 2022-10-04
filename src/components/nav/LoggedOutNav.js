@@ -1,20 +1,37 @@
 // User who is not logged in can click a sign up or login button in the nav bar that will route to the respective page
 
-import { useNavigate } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { useLocation, useNavigate } from "react-router-dom"
 import "./LoggedOutNav.css"
 
 export const LoggedOutNav = () => {
 
+    const [background, setBackground] = useState("")
+    const [text, setText] = useState("")
+    const location = useLocation()
     const navigate = useNavigate()
 
+    useEffect(
+        () => {
+            if (window.location.pathname === "/") {
+                setBackground('transparent');
+                setText('white')
+            } else {
+                setBackground('#FF9659')
+                setText('white')
+            }
+        },
+        [location]
+    )
+
     return (
-        <section className="navbar-out">
-            <button onClick={() => navigate(`/home`)} className="navbar__button navbar__home">
-                <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1663639606/Screen_Shot_2022-09-19_at_9.05.23_PM-removebg-preview_cvnxt3.png' alt="Home" className="home-image"></img>
+        <section className="navbar-out" style={{backgroundColor: background}}>
+            <button onClick={() => navigate(`/home`)} className="navbar__home">
+                <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1664854224/image_mmqlth.png' alt="Home" className="home-image"></img>
             </button>
             <section>
-                <button onClick={() => navigate("/login")} className="navbar-button navbar__login">Login</button>
-                <button onClick={() => navigate("/register")} className="navbar-button navbar__register">Register</button>
+                <button onClick={() => navigate("/login")} className="navbar__button navbar__login" style={{color: text}}>Login</button>
+                <button onClick={() => navigate("/register")} className="navbar__button navbar__register" style={{color: text}}>Register</button>
             </section>
         </section>
     )

@@ -1,0 +1,119 @@
+.main-profile {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 10rem;   
+    display: flex;
+    flex-direction: column;
+}
+
+.details-profile {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 7rem auto 3rem auto;
+    width: 90rem;
+    height: 30rem;
+    color: rgb(71, 71, 71); 
+}
+
+.profile-image_frame {
+    border: 0.1rem solid lightgray;
+    border-radius: 15%;
+    box-shadow: 0.5rem 0.2rem lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    height: 25rem;
+    width: 25rem;
+}
+
+.image-profileMain {
+    height: 95%;
+    width: 95%;
+    padding: 3rem;
+}
+
+.body-profile {
+    justify-content: center;
+    margin-bottom: 3rem;
+    padding: 3rem;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.details-profile_info {
+    margin: 1rem;
+    width: 35rem;
+    padding-top: 1rem;
+}
+
+.body-profile_info {
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    color: rgb(71, 71, 71);
+    padding: 1rem 0;
+}
+
+.body-profile_info > p{
+    margin: 0;
+}
+
+.body-profile_about {
+    font-size: larger;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.paragraph-center {
+    padding: 0 3rem;
+    border-left: 0.1rem solid rgb(71, 71, 71);
+    border-right: 0.1rem solid rgb(71, 71, 71);
+}
+
+.btn-book {
+    border-color: #FF9659;
+    background-color: #FF9659;
+    height: 4rem;
+    width: 13rem;
+    padding: 1rem;
+    margin: 1rem;
+    align-items: center;
+    text-align: center;
+    border-radius: 1.25rem;
+    color: white;
+}
+
+.btn-book:hover {
+    box-shadow: 0 0.2rem 0.5rem 0 rgba(157, 157, 157, 0.24), 0 0.2rem 0.5rem 0 rgba(164, 164, 164, 0.19);
+    background-color: #ffa571;
+    border-color: #ffa571;
+}
+
+.btn-book:disabled{
+    border: none;
+    background-color: lightgray;
+    box-shadow: none;
+}
+
+.profile-photoCollage{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas:
+        "img1  img2  img3 img4"
+        "img1  img7  img3 img9"
+        "img6  img7  img8 img9"
+        "img6  img12 img8 img14";
+    margin-bottom: 4rem;
+}
+
+.profile-collage-image {
+    height: 20rem;
+    width: 20rem;
+}

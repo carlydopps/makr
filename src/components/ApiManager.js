@@ -103,12 +103,12 @@ export const getSelectedProject = (projectId) => {
 }
 
 export const getMakrProjects = (userId) => {
-    return fetch(`http://localhost:8088/projects?userId=${userId}`)
+    return fetch(`http://localhost:8088/projects?_sort=date&userId=${userId}`)
         .then(res => res.json())
 }
 
 export const getProjects = () => {
-    return fetch(`http://localhost:8088/projects?_expand=pro`)
+    return fetch(`http://localhost:8088/projects?_sort=date&_expand=pro`)
         .then(res => res.json())
 }
 
@@ -123,9 +123,26 @@ export const postProject = (project) => {
         .then(res => res.json())
 }
 
+export const saveProject = (project) => {
+    return fetch(`http://localhost:8088/projects/${project.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(project)
+    })
+        .then(res => res.json())
+}
+
+
 export const deleteProject = (projectId) => {
     return fetch(`http://localhost:8088/projects/${projectId}`, {
         method: "DELETE"
     })
 }
 
+// ----------------------------- Image Data -------------------------------------
+export const getImages = (proId) => {
+    return fetch(`http://localhost:8088/images?proId=${proId}`)
+        .then(res => res.json())
+}

@@ -7,7 +7,6 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { getCurrentUser, getSelectedPro, postProject } from "../ApiManager"
 import "./ProjectForm.css"
-import { Image } from 'cloudinary-react'
 import { Footer } from "../footer/Footer"
 
 export const ProjectForm = () => {
@@ -59,7 +58,8 @@ export const ProjectForm = () => {
             description: project.description,
             date: project.date,
             time: new Date(project.date).toLocaleTimeString('en-us'),
-            image: project.image
+            image: project.image,
+            status: "Pending"
         }
 
         postProject(newProject)
@@ -85,12 +85,17 @@ export const ProjectForm = () => {
     }
 
     return <>
-        <form className="projectForm">
+    <div className="page-form">
+    <main className="container-projectForm">
+        <section className="img-container-form">
+            <img src="https://res.cloudinary.com/dupram4w7/image/upload/v1663809673/How_we_DIYed_our_A-Frame_playhouse_in_our_backyard___Petit_Architect_g7rfvv.jpg" className="img-form"/>
+        </section>
+        <form className="form-projectRequest">
             <h2 className="projectForm__title">New Project Request</h2>
-            <p>User: {user.name}</p>
-            <p>Professional: {pro?.user?.name}</p>
+            <p className="form-user">Makr: {user.name}</p>
+            <p className="form-pro">Pro: {pro?.user?.name}</p>
             <fieldset>
-                <label htmlFor="title">Project Title: </label>
+                <label htmlFor="title"></label>
                 <input
                     required autoFocus
                     type="text"
@@ -107,7 +112,7 @@ export const ProjectForm = () => {
                 />
             </fieldset>
             <fieldset>
-                <label htmlFor="description">Description: </label>
+                <label htmlFor="description"></label>
                 <input
                     type="text"
                     className="form-control"
@@ -123,7 +128,7 @@ export const ProjectForm = () => {
                 />
             </fieldset>
             <fieldset>
-                <label htmlFor="date">Date: </label>
+                <label htmlFor="date">Preferred Date of Service: </label>
                 <input
                     type="datetime-local"
                     className="form-control"
@@ -141,7 +146,7 @@ export const ProjectForm = () => {
             <section>
                 {
                     project.image !== ""
-                    ? <img src={project.image} alt="" className="image"/>
+                    ? <img src={project.image} alt="" className="image-projectForm"/>
                     : ""
                 }
                 
@@ -155,6 +160,9 @@ export const ProjectForm = () => {
                 className="btn__submit"
                 >Submit Request</button>
         </form>
+        
+        </main>
+        </div>
         <Footer/>
     </>
     

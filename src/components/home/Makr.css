@@ -4,34 +4,25 @@
 	Border: 1px dotted black;
 } */
 
-html {
+.main-home {
+    min-height: calc(100vh - 10rem);
     background-image: url("https://res.cloudinary.com/dupram4w7/image/upload/v1663735060/background-orange_eim5i8.png");
     background-position: top;
     background-repeat: no-repeat;
     background-size: 100% 14%;
 }
 
-main {
-    min-height: calc(100vh - 10rem);
-    
-}
-
-.home-header {
-    font-family: 'BenchNine', sans-serif;
-    font-weight: 700;
-    font-size: xx-large;
-    margin: 0 0 10rem 0;
-    padding: 1rem;
-    text-align: center;
-}
-
-.home-summary {
+.h1-home {
     font-weight: 400;
-    width: 30rem;
-    font-size: x-large;
-    flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 7rem;;
+    padding: 3rem;
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Unica One', cursive;
+    text-shadow: 0.2rem 0.2rem rgba(197, 133, 73, 0.615);
+    border-bottom: 0.5rem solid #fee9e0;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .pro-summary {
@@ -42,8 +33,15 @@ main {
     margin-right: auto;
 }
 
-h4 {
-    margin-left: 2rem;
+.h2-home {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 500;
+    font-family: 'Mulish', sans-serif;
+    padding: 2rem;
+    background-color: #FF9659;
+    color: #324254;
 }
 
 .footer-home {

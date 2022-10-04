@@ -1,4 +1,132 @@
-.image {
+.image-project {
     height: 15rem;
     width: 15rem;
+}
+
+.page-project {
+    display: flex;
+    height: 100vh;
+    padding-bottom: 10rem;
+}
+
+.container-projectDetails {
+    margin: 7rem auto;
+    width: 60rem;
+    height: 30rem;
+    color: rgb(71, 71, 71);
+}
+
+.h1-projectDetails{
+    font-weight: bold;
+    padding-bottom: 1rem;
+    margin: 0;
+}
+
+.section-project {
+    display: flex;
+    height: 100%;
+}
+
+.details-project_user {
+    display: flex;
+    margin: 2rem 0;
+}
+
+.details-project_userName, .details-project_userPhone, .details-project_userEmail{
+    margin: 0;
+}
+
+.details-project_userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 11rem;
+}
+
+.details-project {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details-project_descriptionBody{
+    display: flex;
+    height: 5rem;
+    width: 30rem;
+    justify-content: left;
+    text-align: left;
+    padding: 0;
+    word-wrap: break-word;
+    white-space: wrap;
+    overflow: scroll;
+    text-overflow: ellipsis;
+}
+
+.details-project_imageFrame {
+    border: 0.1rem solid lightgray;
+    border-radius: 10%;
+    box-shadow: 0.5rem 0.2rem lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.details-project_image{
+    height: 100%;
+    width: 100%;
+    padding: 3rem;
+}
+
+.details-project_imageProfile{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100%;
+}
+
+.details-project_schedule {
+    margin: 2rem 0;
+}
+
+.details-project_approval button {
+    height: 3rem;
+    width: 7rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 1rem 1rem 0;
+    align-items: center;
+    text-align: center;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+}
+
+.button_approve {
+    border-color: #98DE9F;
+    background-color: #98DE9F;
+}
+
+.button_deny {
+    border-color: #324254;
+    background-color: #324254;
+}
+
+.btn-return {
+    border-color: #FF9659;
+    background-color: #FF9659;
+    height: 5rem;
+    width: 14rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 1rem 1rem 0;
+    align-items: center;
+    text-align: center;
+    border-radius: 1rem;
+    color: white;
+}
+
+.btn-return:hover {
+    box-shadow: 0 0.2rem 0.5rem 0 rgba(157, 157, 157, 0.24), 0 0.2rem 0.5rem 0 rgba(164, 164, 164, 0.19);
+    background-color: #ffa571;
+    border-color: #ffa571;
 }
