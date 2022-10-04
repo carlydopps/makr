@@ -2,7 +2,7 @@
 // User can click on a logout button
 
 import { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import { getCurrentUser } from "../ApiManager"
 import { AccountNav } from "./AccountNav"
 import "./LoggedInNav.css"
@@ -10,7 +10,9 @@ import "./LoggedInNav.css"
 export const LoggedInNav = () => {
 
     const [user, setUser] = useState({})
-    const [color, updateColor] = useState("#FF9659")
+    const [background, setBackground] = useState("")
+    const [text, setText] = useState("")
+    const location = useLocation()
 
     const localUser = localStorage.getItem("current_user")
     const currentUser = JSON.parse(localUser)
@@ -28,14 +30,27 @@ export const LoggedInNav = () => {
         []
     )
 
+    useEffect(
+        () => {
+            if (window.location.pathname === "/projects") {
+                setBackground('#2F3F54')
+                setText('white');
+            } else {
+                setBackground('#FF9659')
+                setText('white')
+            }
+        },
+        [location]
+    )
+
     return (
-        <section className="navbar-in">
+        <section className="navbar-in" style={{backgroundColor: background}}>
             <button onClick={() => navigate(`/`)} className="navbar__home">
-                <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1663639606/Screen_Shot_2022-09-19_at_9.05.23_PM-removebg-preview_cvnxt3.png' alt="Home" className="home-image"></img>
+                <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1664854224/image_mmqlth.png' alt="Home" className="home-image"></img>
             </button>
             <section className="navbar-right">
-                <button onClick={() => navigate(`/`)} className="navbar__button navbar__pros">PROS</button>
-                <button onClick={() => navigate(`/projects`)} className="navbar__button navbar__projects">PROJECTS</button>
+                <button onClick={() => navigate(`/`)} style={{color: text}} className="navbar__button navbar__pros">PROS</button>
+                <button onClick={() => navigate(`/projects`)} style={{color: text}} className="navbar__button navbar__projects">PROJECTS</button>
             <AccountNav user={user}/>
             </section>
         </section>

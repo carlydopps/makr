@@ -100,6 +100,26 @@ export const Account = () => {
             widget.open()
     }
 
+    const formatPhoneNumber = (input) => {
+        if (!input) {
+            return input
+        }
+        const phoneNumber = input.replace(/[^\d]/g, "")
+        const phoneNumberLength = phoneNumber.length
+        if (phoneNumberLength < 4) { return phoneNumber}
+        if (phoneNumberLength < 7) {
+            return `(${phoneNumber.slice(0,3)}) ${phoneNumber.slice(3)}`
+        }
+        return `(${phoneNumber.slice(0,3)}) ${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6,10)}`
+    }
+
+    const handlePhoneInput = (event) => {
+        const formattedPhoneNumber = formatPhoneNumber(event.target.value)
+        const copy = {...user}
+        copy.phone = formattedPhoneNumber
+        updateUser(copy)
+    }
+
     const defaultDisplay = () => {
 
         return <>
@@ -113,7 +133,7 @@ export const Account = () => {
                     </div>
                     <div className="body-contactLayout_info">
                         <p>{user.email}</p>
-                        <p>{`(${user.phone.slice(0,3)}) ${user?.phone?.slice(3, 6)}-${user.phone.slice(6,10)}`}</p>
+                        <p>{user.phone}</p>
                         <p>{currentUser.isPro ? "Pro" : "Makr"}</p>
                     </div>
                 </div>
@@ -174,16 +194,13 @@ export const Account = () => {
             <div className="form-group">
                 <label htmlFor="phone">Phone Number: </label>
                 <input 
-                    type="text"
+                    type="tel"
                     className="form-control"
+                    pattern="([0-9]){3} [0-9]{3}-[0-9]{4}"
                     placeholder={user.phone}
                     value={user.phone}
                     onChange={
-                        (event) => {
-                            const copy = {...user}
-                            copy.phone = event.target.value
-                            updateUser(copy)
-                        }
+                        (event) => {handlePhoneInput(event)}
                     } />
             </div>
         </fieldset>
@@ -281,7 +298,7 @@ export const Account = () => {
     return <>
         <main className="main-account">
             <div className="image-stack">
-                <img src="https://res.cloudinary.com/dupram4w7/image/upload/v1663809675/Re-Love_Project_before_after_pqmcgf.jpg" className="image-stack_bottom"/>
+                <img src="https://res.cloudinary.com/dupram4w7/image/upload/v1664860297/Re-Love_Project_before_after_copy_lkh6ew.png" className="image-stack_bottom"/>
                 <img src={user.profileImage} className="image-stack_top"/>
             </div>
             <section className="body-account">

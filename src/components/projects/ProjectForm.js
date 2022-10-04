@@ -7,7 +7,6 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { getCurrentUser, getSelectedPro, postProject } from "../ApiManager"
 import "./ProjectForm.css"
-import { Image } from 'cloudinary-react'
 import { Footer } from "../footer/Footer"
 
 export const ProjectForm = () => {
@@ -93,8 +92,8 @@ export const ProjectForm = () => {
         </section>
         <form className="form-projectRequest">
             <h2 className="projectForm__title">New Project Request</h2>
-            <p className="form-user">User: {user.name}</p>
-            <p className="form-pro">Professional: {pro?.user?.name}</p>
+            <p className="form-user">Makr: {user.name}</p>
+            <p className="form-pro">Pro: {pro?.user?.name}</p>
             <fieldset>
                 <label htmlFor="title"></label>
                 <input

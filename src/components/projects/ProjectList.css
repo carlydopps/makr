@@ -9,8 +9,10 @@
     background-image: url("https://res.cloudinary.com/dupram4w7/image/upload/v1663818701/Makr_landing_page_fdk3gx.png");
     background-position: top;
     background-repeat: no-repeat;
-    background-size: 100% 32%;
+    background-size: 100% 22%;
     margin-top: -10rem;
+    position: relative;
+    z-index: 1;
 }
 
 .projects-header {
@@ -20,23 +22,27 @@
     margin-top: 10rem;
     margin-left: auto;
     margin-right: auto;
+    height: 10rem;
 }
 
 .projects-list {
     justify-content: left;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20rem;
     width: 100vw;
     padding: 1rem;
 }
 
 .project_list_body {
     display: flex;
+    flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     padding-bottom: 10rem;
     margin-left: 0;
-    margin-top: 5rem;
+    margin-top: 2rem;
+    position: relative;
 }
 
 .menu-listType {
@@ -58,12 +64,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 4rem;
+    padding: 0 4rem;
     color: whitesmoke;
     font-size: 2.5rem;
     font-weight: bold;
-    border-right: 0.2rem solid whitesmoke;
-    height: 10rem;
+    border-right: 0.2rem solid #778492;
+    height: 5rem;
     width: auto;
     text-align: center;
 }
@@ -71,11 +77,11 @@
 .h2-project_listMakr, .h2-project_listPro {
     text-align: left;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #ffb387;
 }
 
-.h2-project_listPro {
+.h2-project_listMakr {
     color: #afd9b4;
 }
 
@@ -86,21 +92,27 @@
 
 .body-projects {
     display: flex;
-    height: 100vh;
+    margin-top: -15rem;
 }
 
 .btn-seePros {
     border-color: #FF9659;
     background-color: #FF9659;
     height: 3.5rem;
-    width: 14rem;
+    width: 19rem;
     padding: 1rem 2rem;
-    margin: 1rem;
+    margin: 1rem auto;
     align-items: center;
     text-align: center;
     border-radius: 1.25rem;
     color: whitesmoke;
     font-weight: bold;
+}
+
+.btn-seePros:hover {
+    box-shadow: 0 0.2rem 0.5rem 0 rgba(157, 157, 157, 0.24), 0 0.2rem 0.5rem 0 rgba(164, 164, 164, 0.19);
+    background-color: #ffa571;
+    border-color: #ffa571;
 }
 
 .project {
@@ -131,7 +143,13 @@
     border-radius: 0.7rem;
     color: whitesmoke;
     outline: none;
-    box-shadow: 0 0.3rem #3242545c;
+    box-shadow: 0 0.2rem 0.5rem 0 #3242545c;
+}
+
+.btn-project_view:hover {
+    box-shadow: 0 0.3rem 0.6rem 0 #2834435c, 0 0.3rem 0.6rem 0 #3242545c;
+    background-color: #3f4f5f;
+    border-color: #3f4f5f;
 }
 
 .btn-project_delete {
@@ -188,16 +206,19 @@
 
 .status-filter {
     display: flex;
-    flex-direction: column;
-    justify-content: left;
-    width: 10rem;
-    margin-top: 6rem;
+    justify-content: center;
+    width: 35rem;
+    margin: 0 auto;
     font-size: 0.8rem;
     -webkit-transition: border 500ms ease;
     -moz-transition: border 500ms ease;
     -ms-transition: border 500ms ease;
     -o-transition: border 500ms ease;
     transition: border 500ms ease; 
+}
+
+.status-filter h5 {
+    margin: auto 2rem;
 }
 
 .status-filter button:hover {
@@ -208,7 +229,7 @@
     display: flex;
     height: 4rem;
     width: 12rem;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     background-color: transparent;
     border: none;
@@ -218,7 +239,7 @@
     margin: 1rem 1rem 1rem 0;
 }
 
-.svg-approved, .svg-pending, .svg-cancelled {
+.svg-approved, .svg-pending, .svg-cancelled, .svg-filler {
     margin: -1.5rem auto 0 auto;
     border-radius: 100%;
     padding: 0.5rem;
@@ -260,21 +281,35 @@
 .list-projectsDisplay {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto; 
+    grid-template-rows: 1fr 1fr; 
     justify-items: center;
     margin: 3rem auto 3rem auto;
     padding: 1rem;
 }
 
 .message-noProjects {
-    margin-top: 10rem;
-    margin-left: 30%;
-    margin-right: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: top;
+    height: 76rem;
+}
+
+.message-noProjects img {
+    width: 20rem;
+    height: 20rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .message-project {
-    margin: 1rem;
+    margin: 0 1rem 1rem 1rem;
     text-align: center;
+    width: 20rem;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #2F3F53;
 }
 
 .sectionSwitch::after {
@@ -336,7 +371,7 @@ label {
     height: 100%;
     width: 20%;
     border-radius: 10px;
-    background-color: #98DE9F;
+    background-color: #71a376;
 }
 .input-switch .input + .switch::after {
     left: 5px;
@@ -362,4 +397,41 @@ label {
 .input-switch .input:checked + .switch::after {
     left: calc(100% - (20px + 5px));
     background-color: #f8bc99;
+}
+
+.feedback {
+    padding: 1rem;
+    background-color: #ffb489;
+    color: white;
+    border-radius: 1.25rem;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 40%;
+    transform: translate(-50%, -50%);
+    animation: 1s slideDown;
+}
+
+.invisible {
+display: none;
+}
+
+.visible {
+display: block;
+}
+
+.error {
+border: 1px dotted rgb(107, 21, 4);
+padding: 1rem;
+background-color: rgb(255, 229, 228);
+}
+
+@keyframes slideDown {
+0% {
+    top: 0%;
+}
+
+100% {
+    top: 20%;
+}
 }

@@ -12,7 +12,7 @@
 .details-profile {
     display: flex;
     justify-content: space-evenly;
-    margin: 10rem auto 6rem auto;
+    margin: 7rem auto 3rem auto;
     width: 90rem;
     height: 30rem;
     color: rgb(71, 71, 71); 
@@ -88,16 +88,29 @@
     color: white;
 }
 
+.btn-book:hover {
+    box-shadow: 0 0.2rem 0.5rem 0 rgba(157, 157, 157, 0.24), 0 0.2rem 0.5rem 0 rgba(164, 164, 164, 0.19);
+    background-color: #ffa571;
+    border-color: #ffa571;
+}
+
 .btn-book:disabled{
     border: none;
     background-color: lightgray;
+    box-shadow: none;
 }
 
 .profile-photoCollage{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas:
+        "img1  img2  img3 img4"
+        "img1  img7  img3 img9"
+        "img6  img7  img8 img9"
+        "img6  img12 img8 img14";
+    margin-bottom: 4rem;
 }
 
 .profile-collage-image {
