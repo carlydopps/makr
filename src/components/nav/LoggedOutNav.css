@@ -5,16 +5,21 @@
     width: auto;
     align-items: center;
     justify-content: space-between;
+    background-color: #FF9659;
+    position: relative;
+    z-index: 1001;
+    font-family: 'Mulish', sans-serif;
 }
 
 .navbar-button {
-    font-family: 'BenchNine', sans-serif;
     font-size: medium;
     border: none;
     border-radius: 10%;
     background-color: transparent;
+    font-weight: 600;
     height: 4rem;
     width: 9rem;
     padding: 0.4rem;
     margin: 1rem;
+    font-size: 1.3rem;
 }

@@ -100,36 +100,76 @@ export const Account = () => {
             widget.open()
     }
 
+    const formatPhoneNumber = (input) => {
+        if (!input) {
+            return input
+        }
+        const phoneNumber = input.replace(/[^\d]/g, "")
+        const phoneNumberLength = phoneNumber.length
+        if (phoneNumberLength < 4) { return phoneNumber}
+        if (phoneNumberLength < 7) {
+            return `(${phoneNumber.slice(0,3)}) ${phoneNumber.slice(3)}`
+        }
+        return `(${phoneNumber.slice(0,3)}) ${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6,10)}`
+    }
+
+    const handlePhoneInput = (event) => {
+        const formattedPhoneNumber = formatPhoneNumber(event.target.value)
+        const copy = {...user}
+        copy.phone = formattedPhoneNumber
+        updateUser(copy)
+    }
+
     const defaultDisplay = () => {
 
         return <>
-            <section>
-                <h3>Contact Information</h3>
-                <p>Email: {user.email}</p>
-                <p>Phone: {`(${user.phone.slice(0,3)}) ${user?.phone?.slice(3, 6)}-${user.phone.slice(6,10)}`}</p>
-                <p>Account Type: {currentUser.isPro ? "Pro" : "Makr"}</p>
+            <section className="body-contact">
+                <h4>Contact Information</h4>
+                <div className="body-contactLayout">
+                    <div className="body-contactLayout_titles">
+                        <p>Email:</p>
+                        <p>Phone:</p>
+                        <p>Account:</p>
+                    </div>
+                    <div className="body-contactLayout_info">
+                        <p>{user.email}</p>
+                        <p>{user.phone}</p>
+                        <p>{currentUser.isPro ? "Pro" : "Makr"}</p>
+                    </div>
+                </div>
+                
                 {
                     currentUser.isPro
-                    ? <section>
-                        <h2>Professional Details</h2>
-                        <p>About Me: {pro.aboutMe}</p>
-                        <p>Expertise: {pro.expertiseType?.name}</p>
-                        <p>Hourly Rate: {pro.price.toLocaleString(`en-US`, {style: 'currency', currency: 'USD'})}</p>
-                        <p>Years of Experience: {pro.experience}</p>
+                    ? <section className="body-proDetails">
+                        <h4>Professional Details</h4>
+                        <p className="body-contactLayout_titles">{pro.aboutMe}</p>
+                        <div className="body-contactLayout">
+                            <div className="body-contactLayout_titles">
+                                <p>Expertise:</p>
+                                <p>Hourly Rate:</p>
+                                <p>Years of Experience:</p>
+                            </div>
+                            <div className="body-contactLayout_info">
+                                <p>{pro.expertiseType?.name}</p>
+                                <p>{pro.price.toLocaleString(`en-US`, {style: 'currency', currency: 'USD'})}</p>
+                                <p>{pro.experience}</p>
+                            </div>
+                        </div>
                     </section>
                     : ""
                     
                 }
-                <button onClick={() => updateClickStatus(true)}>Edit Profile</button>
+                <button onClick={() => updateClickStatus(true)} className="btn-editProfile">Edit Profile</button>
             </section>
         </>
     }
 
     const editDetails = () => {
-        return <form className="accountForm">
-        <h2 className="accountForm__title">Edit Profile Information</h2>
+        return <section className="body-contact">
+        <form className="accountForm">
+        <h4 className="accountForm__title">Edit Profile Information</h4>
         <button onClick={(event) => showWidget(event)}
-                    className="cloudinary-button">
+                    className="btn-accountPhoto">
                     Update photo
                 </button>
         <fieldset>
@@ -138,7 +178,7 @@ export const Account = () => {
                 <input
                     required autoFocus
                     type="text"
-                    className="email__update"
+                    className="form-control"
                     placeholder={user.email}
                     value={user.email}
                     onChange={
@@ -154,16 +194,13 @@ export const Account = () => {
             <div className="form-group">
                 <label htmlFor="phone">Phone Number: </label>
                 <input 
-                    type="text"
-                    className="phone__update"
+                    type="tel"
+                    className="form-control"
+                    pattern="([0-9]){3} [0-9]{3}-[0-9]{4}"
                     placeholder={user.phone}
                     value={user.phone}
                     onChange={
-                        (event) => {
-                            const copy = {...user}
-                            copy.phone = event.target.value
-                            updateUser(copy)
-                        }
+                        (event) => {handlePhoneInput(event)}
                     } />
             </div>
         </fieldset>
@@ -195,13 +232,14 @@ export const Account = () => {
                                 const copy = {...pro}
                                 copy.expertiseTypeId = parseInt(event.target.value)
                                 updatePro(copy)
-                            }
-                        }>
+                            }}
+                        className="form-control">
                             <option value={pro.expertiseTypeId}>{pro.expertiseType.name}</option>
                             {
                                 expertiseTypes.map(expertise => <option
                                 key={expertise.id}
-                                value={expertise.id}>
+                                value={expertise.id}
+                                className="form-control">
                                 {expertise.name}</option>)
                             }
                     </select>
@@ -244,33 +282,34 @@ export const Account = () => {
         }
         <button 
             onClick={(event) => handleSave(event)}
-            className="btn btn-primary">
+            className="btn-accountSave">
             Save
         </button>
         <button 
             onClick={(event) => handleCancel(event)}
-            className="btn btn-primary">
+            className="btn-accountCancel">
             Cancel
         </button>
     </form>
+    </section>
     }
 
 
-    return (
-        <>
-            <header>
-                <img src={user.profileImage} className="image-profile"/>
-                <h1>Hi, {firstName}!</h1>
-            </header>
-            
-            <section>
+    return <>
+        <main className="main-account">
+            <div className="image-stack">
+                <img src="https://res.cloudinary.com/dupram4w7/image/upload/v1664860297/Re-Love_Project_before_after_copy_lkh6ew.png" className="image-stack_bottom"/>
+                <img src={user.profileImage} className="image-stack_top"/>
+            </div>
+            <section className="body-account">
+                <h1 className="h1-account">Hi, {firstName}!</h1>
                 {
                     clickStatus
                     ? editDetails()
                     : defaultDisplay()
                 }
             </section>
-            <Footer/>
-        </>
-    )
+        </main>
+        <Footer/>
+    </>
 }

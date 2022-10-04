@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
-import { deleteProject, getAssignedMakr, getAssignedPro, getCurrentUser, getSelectedProject } from "../ApiManager"
+import { getAssignedMakr, getAssignedPro, getCurrentUser, getSelectedProject, saveProject } from "../ApiManager"
+import { Footer } from "../footer/Footer"
 import "./ProjectDetails.css"
 
 export const ProjectDetails = () => {
@@ -26,6 +27,9 @@ export const ProjectDetails = () => {
                     const selectedProject = data[0]
                     updateProject(selectedProject)
                 })
+            
+            window.scrollTo(0, 0)
+
         },
         [projectId]
     )
@@ -50,10 +54,11 @@ export const ProjectDetails = () => {
         [project]
     )
 
-    const returnButton = () => {
-        return <button onClick={() => 
-            navigate(`/projects`)}
-            >Return to Project List</button>
+    const handleDecision = (status) => {
+        const copy = {...project}
+        copy.status = status
+        saveProject(copy)
+            .then(() => window.location.reload(false))
     }
 
     const formatDay = () => {
@@ -76,39 +81,68 @@ export const ProjectDetails = () => {
     }
 
     return <>
-        <header>
-            <h1 className="projectDetails__header">{project.title}</h1>
-        </header>
-        <section>
-            {
-                user.isPro && user.id !== project.userId
-                ? <section>
-                    <p>Makr: {makr?.name}</p>
-                    <a href={`mailto:${makr?.email}`}>{makr?.email}</a>
-                    <p>{`(${makr?.phone?.slice(0,3)}) ${makr?.phone?.slice(3, 6)}-${makr?.phone?.slice(6,10)}`}</p>
-                </section>
-                : <section>
-                    <p>Pro: 
-                        <Link to={`/profile/${pro?.id}`}>{pro?.user?.name}</Link>
-                    </p>
-                </section>
-            }
+    <main className="page-project">
+    <div className="container-projectDetails">
+        <section className="section-project">
+            <section className="details-project">
+                <h4 className="h1-projectDetails">{project.title}</h4>
+                <article className="details-project_description">
+                    <p className="details-project_descriptionBody">{project.description}</p> 
+                </article>
+                <article className="details-project_user">
+                    {
+                        user.isPro && user.id !== project.userId
+                        ? <>
+                            <div className="details-project_userInfo">
+                                <h5 >Makr Details</h5>
+                                <p className="details-project_userName">{makr?.name}</p>
+                                <p className="details-project_userPhone">{`(${makr?.phone?.slice(0,3)}) ${makr?.phone?.slice(3, 6)}-${makr?.phone?.slice(6,10)}`}</p>
+                                <a href={`mailto:${makr?.email}`} className="details-project_userEmail">{makr?.email}</a>
+                            </div>
+                            <img src={makr?.profileImage} className="details-project_imageProfile"/>
+                        </>
+                        : <>
+                        <p className="details-project_userInfo">
+                            Pro Details
+                                <Link to={`/profile/${pro?.id}`}
+                                >{pro?.user?.name}</Link>
+                        </p>
+                        <img src={pro?.user?.profileImage} className="details-project_imageProfile"/>
+                        </>
+                    }
+                    
+                </article>
+                <article className="details-project_schedule">
+                    <h5>Session Details</h5>
+                    <p className="details-project_dateTime">{formatDay()} {formatDate()} at {formatTime()}</p> 
+                </article>
+                <div className="details-project_approval">
+                    {
+                        user.isPro && user.id !== project.userId
+                        ? 
+                            project.status === "Pending"
+                            ? <>
+                            <button onClick={() => handleDecision("Approved")}className="button_approve">Approve</button>
+                            <button onClick={() => handleDecision("Cancelled")}className="button_deny">Deny</button>
+                            </>
+                            : project.status === "Approved"
+                            ?<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="svg-approved" viewBox="0 0 16 16">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                            </svg>
+                            : <p>Denied</p>
+                        : ""
+                    }
+                </div>
+                <button onClick={() => navigate(`/projects`)}
+                className="btn-return"
+                >Return to Project List</button>    
+            </section>
+            <div className="details-project_imageFrame">
+                <img src={project.image} className="details-project_image"/>
+            </div>
         </section>
-        <section>
-            <article>
-                <h4>Description</h4>
-                <p>{project.description}</p> 
-                <img src={project.image} className="image"></img>
-            </article>
-            <article>
-                <h4>Scheduled Time</h4>
-                <p>{formatDay()} {formatDate()} at {formatTime()}</p> 
-            </article>    
-        </section>
-        {
-            returnButton()
-        }
-
-
+    </div>
+    </main>
+    <Footer/>
     </>
 }

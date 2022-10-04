@@ -1,5 +1,101 @@
-.image-profile {
-    height: 5rem;
-    width: 5rem;
+.page-account {
+    height: 100vh;
+}
+
+.main-account {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 10rem;
+    font-family: 'Mulish', sans-serif;
+}
+
+.image-stack {
+    display: flex;
+    position: relative;
+    height: 100vh;
+}
+
+.image-stack_top {
+    justify-content: center;
+    height: 9rem;
+    width: 9rem;
     border-radius: 100%;
+    margin: 0rem -2rem 38rem -4rem;
+    align-self: center;
+}
+
+.header-account {
+    display: flex;
+    justify-content: flex-start;
+    padding: 2rem;
+}
+
+.body-account {
+    justify-content: center;
+    margin-top: 2.5rem;
+    margin-left: 3rem;
+    padding: 3rem;
+    width: 40rem;
+}
+
+.body-contact {
+    height: 40rem;
+}
+
+.body-contactLayout {
+    display: flex;
+}
+
+.body-contactLayout_titles {
+    padding: 1rem;
+}
+
+.body-contactLayout_info {
+    padding: 1rem 0;
+}
+
+.h1-account, .body-contact {
+    padding: 2rem;
+    padding: 2rem;
+}
+
+.btn-editProfile, .btn-accountSave, .btn-accountCancel, .btn-accountPhoto {
+    border-color: #FF9659;
+    background-color: #FF9659;
+    height: 3rem;
+    width: 10rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 1rem 1rem 0;
+    align-items: center;
+    text-align: center;
+    border-radius: 1.25rem;
+    color: whitesmoke;
+}
+
+.btn-editProfile:hover, .btn-accountSave:hover, .btn-accountCancel:hover {
+    box-shadow: 0 0.2rem 0.5rem 0 rgba(157, 157, 157, 0.24), 0 0.2rem 0.5rem 0 rgba(164, 164, 164, 0.19);
+    background-color: #ffa571;
+    border-color: #ffa571;
+}
+
+.btn-accountPhoto {
+    background-color: #94da9a;
+    border-color: #94da9a;
+}
+
+.btn-accountPhoto:hover {
+    box-shadow: 0 0.2rem 0.5rem 0 rgba(157, 157, 157, 0.24), 0 0.2rem 0.5rem 0 rgba(164, 164, 164, 0.19);
+    background-color: #b3e1b6;
+    border-color: #b3e1b6;
+}
+
+.body-proDetails {
+    margin: 2rem 0;
+}
+
+p {
+    margin: 0;
 }

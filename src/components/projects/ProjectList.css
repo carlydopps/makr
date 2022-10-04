@@ -1,0 +1,437 @@
+.main-projects {
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-bottom: 10rem;
+    color: rgb(71, 71, 71);
+    font-family: 'Mulish', sans-serif;
+    background-image: url("https://res.cloudinary.com/dupram4w7/image/upload/v1663818701/Makr_landing_page_fdk3gx.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 22%;
+    margin-top: -10rem;
+    position: relative;
+    z-index: 1;
+}
+
+.projects-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10rem;
+}
+
+.projects-list {
+    justify-content: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20rem;
+    width: 100vw;
+    padding: 1rem;
+}
+
+.project_list_body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 10rem;
+    margin-left: 0;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.menu-listType {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 3rem;
+}
+
+.button-listType {
+    background-color: transparent;
+    border: none;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0.2rem 0.2rem rgba(211, 211, 211, 0.496);
+}
+
+.h2-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+    color: whitesmoke;
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-right: 0.2rem solid #778492;
+    height: 5rem;
+    width: auto;
+    text-align: center;
+}
+
+.h2-project_listMakr, .h2-project_listPro {
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #ffb387;
+}
+
+.h2-project_listMakr {
+    color: #afd9b4;
+}
+
+.section-switch_title {
+    margin: 2rem;
+    width: 20rem;
+}
+
+.body-projects {
+    display: flex;
+    margin-top: -15rem;
+}
+
+.btn-seePros {
+    border-color: #FF9659;
+    background-color: #FF9659;
+    height: 3.5rem;
+    width: 19rem;
+    padding: 1rem 2rem;
+    margin: 1rem auto;
+    align-items: center;
+    text-align: center;
+    border-radius: 1.25rem;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.btn-seePros:hover {
+    box-shadow: 0 0.2rem 0.5rem 0 rgba(157, 157, 157, 0.24), 0 0.2rem 0.5rem 0 rgba(164, 164, 164, 0.19);
+    background-color: #ffa571;
+    border-color: #ffa571;
+}
+
+.project {
+    width: 25rem;
+    height: 28rem;
+    margin: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(212, 212, 212, 0.274);
+}
+
+.image-projectPreview {
+    width: 25rem;
+    height: 18rem;
+    border-width: 0.5rem 0.5rem 0 0.5rem;
+    border-style: solid;
+    border-color: white;
+}
+
+.btn-project_view {
+    border: none;
+    background-color: #324254;
+    height: 3.5rem;
+    width: 9rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem auto;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.7rem;
+    color: whitesmoke;
+    outline: none;
+    box-shadow: 0 0.2rem 0.5rem 0 #3242545c;
+}
+
+.btn-project_view:hover {
+    box-shadow: 0 0.3rem 0.6rem 0 #2834435c, 0 0.3rem 0.6rem 0 #3242545c;
+    background-color: #3f4f5f;
+    border-color: #3f4f5f;
+}
+
+.btn-project_delete {
+    border: none;
+    background-color: #f5a373;
+    height: 2.5rem;
+    width: 25rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem auto;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.7rem;
+    color: whitesmoke;
+    outline: none;
+}
+
+.project-header {
+    display: grid;
+    justify-content: center;
+    width: 17rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-header button {
+    margin-top: -2rem;
+}
+
+.project-header img {
+    margin: 0;
+}
+
+.body-projectPreview {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.body-projectPreview_date {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 0 1rem;
+}
+
+.body-projectPreview_date svg {
+    margin: auto 0.7rem auto 0;
+}
+
+.body-projectPreview_date p {
+    margin: 0;
+}
+
+.status-filter {
+    display: flex;
+    justify-content: center;
+    width: 35rem;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    -webkit-transition: border 500ms ease;
+    -moz-transition: border 500ms ease;
+    -ms-transition: border 500ms ease;
+    -o-transition: border 500ms ease;
+    transition: border 500ms ease; 
+}
+
+.status-filter h5 {
+    margin: auto 2rem;
+}
+
+.status-filter button:hover {
+    border-bottom: 0.3rem solid #ffcab3;
+  }
+
+.status-filter button {
+    display: flex;
+    height: 4rem;
+    width: 12rem;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+
+.status-filter svg {
+    margin: 1rem 1rem 1rem 0;
+}
+
+.svg-approved, .svg-pending, .svg-cancelled, .svg-filler {
+    margin: -1.5rem auto 0 auto;
+    border-radius: 100%;
+    padding: 0.5rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+.svg-approved {
+    background-color: #98DEA0;
+    color: white;
+}
+
+.svg-pending {
+    background-color: #f5a373;
+    color: white;
+}
+
+.svg-cancelled {
+    background-color: rgb(185, 185, 185);
+    color: white;
+}
+
+.project-details_title {
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 1.5rem;;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.project-details_date {
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.list-projectsDisplay {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr; 
+    justify-items: center;
+    margin: 3rem auto 3rem auto;
+    padding: 1rem;
+}
+
+.message-noProjects {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: top;
+    height: 76rem;
+}
+
+.message-noProjects img {
+    width: 20rem;
+    height: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.message-project {
+    margin: 0 1rem 1rem 1rem;
+    text-align: center;
+    width: 20rem;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #2F3F53;
+}
+
+.sectionSwitch::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: 0.4s;
+}
+.sectionSwitch.active::after {
+    transform: translateX(0);
+}
+.container {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1rem 1rem 1rem 0;
+    max-width: 300px;
+    background-color: transparent;
+    text-align: left;
+    font-size: 1.5rem;
+}
+label {
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    color: whitesmoke;
+}
+.input-switch {
+    display: inline-block;
+}
+.input-switch .input {
+    position: absolute;
+    visibility: hidden;
+}
+.input-switch .input + .switch {
+    position: relative;
+    height: 10px;
+    width: 45px;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-radius: 10px;
+    background-color: #e4ecfa;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s 0.05s;
+}
+.input-switch .input + .switch::before, .input-switch .input + .switch::after {
+    content: "";
+    position: absolute;
+    transition: 0.35s;
+}
+.input-switch .input + .switch::before {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    border-radius: 10px;
+    background-color: #71a376;
+}
+.input-switch .input + .switch::after {
+    left: 5px;
+    top: 50%;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: #afd9b4;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+.input-switch .input + .switch:hover::after {
+    transform: translateY(-50%) scale(1.1);
+}
+.input-switch .input:checked + .switch {
+    background-color: #fadfe0;
+}
+.input-switch .input:checked + .switch::before {
+    width: calc(100% - 5px);
+    background-color: #FF9659;
+}
+.input-switch .input:checked + .switch::after {
+    left: calc(100% - (20px + 5px));
+    background-color: #f8bc99;
+}
+
+.feedback {
+    padding: 1rem;
+    background-color: #ffb489;
+    color: white;
+    border-radius: 1.25rem;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 40%;
+    transform: translate(-50%, -50%);
+    animation: 1s slideDown;
+}
+
+.invisible {
+display: none;
+}
+
+.visible {
+display: block;
+}
+
+.error {
+border: 1px dotted rgb(107, 21, 4);
+padding: 1rem;
+background-color: rgb(255, 229, 228);
+}
+
+@keyframes slideDown {
+0% {
+    top: 0%;
+}
+
+100% {
+    top: 20%;
+}
+}
