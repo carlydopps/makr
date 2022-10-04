@@ -1,13 +1,19 @@
 .button__pro {
     color: rgb(71, 71, 71);
     border: 0.1rem solid whitesmoke;
-    background-color: white;
-    padding: 1rem;
+    background-color: transparent;
     border-radius: 5%;
     margin: 2rem;
     width: 18rem;
-    height: 24rem;
-    box-shadow: 0.5rem 0.2rem rgba(227, 227, 227, 0.694);
+    height: 29rem;
+    box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(212, 212, 212, 0.274);
+    display: grid;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.button__pro:hover {
+    box-shadow: 0 0.5rem 1rem 0 rgba(61, 61, 61, 0.24), 0 0.5rem 1rem 0 rgba(63, 63, 63, 0.19);
 }
 
 .list__pros {
@@ -15,15 +21,32 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto; 
     justify-items: center;
-    margin: 3rem auto 3rem auto;
+    margin: 2rem auto;
     padding: 1rem;
+    width: 80rem;
+}
+
+.pro-card_details {
+    color: white;
+    background-image: url("https://res.cloudinary.com/dupram4w7/image/upload/v1664836242/new_k66maq.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 18rem 13rem;
+    margin-bottom: 0;
+    margin-top: -5rem;
+    position: relative;
+    z-index: 2;
+    height: 16rem;
+    border-radius: 5%;
 }
 
 .profileImage-pro {
-    width: 11rem;
-    height: 11rem;
-    margin-left: auto;
-    margin-right: auto;
+    border-radius: 5%;
+    width: 17.8rem;
+    height: 18rem;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .h4-home {
@@ -34,7 +57,11 @@
 }
 
 .h4-proName {
-    padding: 1.5rem;
+    padding: 1rem;
+    margin: 5rem 0 0 0;
+    font-weight: 300;
+    /* background-color: #94da9a; */
+    border-radius: 5%;
 }
 
 .list-proPreview {
@@ -43,6 +70,10 @@
     list-style: none;
     text-align: center;
     font-size: medium;
+}
+
+.pro-expertise {
+    font-weight: bold;
 }
 
 .search-pro {

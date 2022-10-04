@@ -6,14 +6,21 @@ import "./ProjectList.css"
 
 export const ProjectList = () => {
 
-    const [projectType, setProjectType] = useState("pro")
+    const [projectType, setProjectType] = useState("makr")
+
+    useEffect(
+        () => {
+            window.scrollTo(0, 0)
+        },
+        []
+    )
 
     useEffect(
         () => {
             if (projectType === "makr") {
-            document.querySelector(".sectionSwitch").classList.add('active');
+            document.querySelector(".sectionSwitch").classList.remove('active');
             } else {
-                document.querySelector(".sectionSwitch").classList.remove('active');
+                document.querySelector(".sectionSwitch").classList.add('active');
             }
         },
         [projectType]
@@ -26,13 +33,13 @@ export const ProjectList = () => {
         <main className="main-projects">
             <div className="sectionSwitch">
                 <div className="projects-header">
-                    <h2 className="h2-project">Projects</h2>
+                    <h2 className="h2-project">P R O J E C T S</h2>
                     <div className="section-switch_title">
                     {
                         currentUser.isPro
                         ? <div className="container">
                             <div className="input-switch">
-                                <label htmlFor="switchy">Pro</label>
+                                <label htmlFor="switchy">Makr</label>
                                 <input type="checkbox" id="switchy" className="input" onChange={() => {
                                     if (projectType === "pro") {
                                         setProjectType("makr")
@@ -40,7 +47,7 @@ export const ProjectList = () => {
                                         setProjectType("pro")
                                     }}}/>
                                 <label htmlFor="switchy" className="switch"></label>
-                                <label htmlFor="switchy">Makr</label>
+                                <label htmlFor="switchy">Pro</label>
                             </div>
                         </div>
                         // <aside className="menu-listType">
@@ -51,13 +58,12 @@ export const ProjectList = () => {
                     }
                     { 
                         projectType === "makr"
-                        ? <h2 className="h2-project_listMakr">Makr Projects</h2>
-                        : <h2 className="h2-project_listPro">Pro Projects</h2>
+                        ? <h2 className="h2-project_listMakr">MAKR PROJECTS</h2>
+                        : <h2 className="h2-project_listPro">PRO PROJECTS</h2>
                     }  
                     </div>
                     </div>
                 <div className="body-projects">
-                
                     <section className="projects-list">
                         {
                             currentUser.isPro

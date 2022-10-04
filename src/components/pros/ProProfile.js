@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link, useNavigate, useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { getImages, getSelectedPro } from "../ApiManager"
 import { Footer } from "../footer/Footer"
 import { ProjectForm } from "../projects/ProjectForm"

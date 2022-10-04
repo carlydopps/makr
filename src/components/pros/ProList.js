@@ -42,12 +42,14 @@ export const ProList = ({searchTermState}) => {
                 return <div key={`pro--${pro.id}`}>
                     <button onClick={() => navigate(`/profile/${pro.id}`)} className="button__pro">
                         <img src={pro.user.profileImage} alt="Profile Image" className="profileImage-pro"/>
-                        <h4 className="h4-proName">{pro.user.name}</h4>
-                        <ul className="list-proPreview">
-                            <li>{pro.expertiseType.name}</li>
-                            <li>{pro.experience} years of experience</li>
-                            <li>{pro.price.toLocaleString(`en-US`, {style: 'currency', currency: 'USD'})}</li>
-                        </ul>
+                        <div className="pro-card_details">
+                            <h4 className="h4-proName">{pro.user.name}</h4>
+                            <ul className="list-proPreview">
+                                <li className="pro-expertise">{pro.expertiseType.name}</li>
+                                <li>{pro.experience} years of experience</li>
+                                <li>{pro.price.toLocaleString(`en-US`, {style: 'currency', currency: 'USD'})}</li>
+                            </ul>
+                        </div>
                     </button>
                 </div>
             })

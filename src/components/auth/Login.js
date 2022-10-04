@@ -36,7 +36,7 @@ export const Login = () => {
 
     return <>
         <section>
-                <button onClick={() => navigate(`/home`)} className="navbar__button navbar__home">
+                <button onClick={() => navigate(`/home`)} className="navbar__home">
                         <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1663639606/Screen_Shot_2022-09-19_at_9.05.23_PM-removebg-preview_cvnxt3.png' alt="Home" className="home-image"></img>
                 </button>
         </section>

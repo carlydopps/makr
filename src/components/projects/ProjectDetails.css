@@ -7,10 +7,6 @@
     display: flex;
     height: 100vh;
     padding-bottom: 10rem;
-    /* background-image: url("https://res.cloudinary.com/dupram4w7/image/upload/v1663735060/background-orange_eim5i8.png");
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 100% 10%; */
 }
 
 .container-projectDetails {
@@ -119,7 +115,7 @@
 .btn-return {
     border-color: #FF9659;
     background-color: #FF9659;
-    height: 3rem;
+    height: 5rem;
     width: 14rem;
     padding: 0.5rem 1rem;
     margin: 1rem 1rem 1rem 0;
@@ -129,6 +125,8 @@
     color: white;
 }
 
-.profile-photoCollage {
-
+.btn-return:hover {
+    box-shadow: 0 0.2rem 0.5rem 0 rgba(157, 157, 157, 0.24), 0 0.2rem 0.5rem 0 rgba(164, 164, 164, 0.19);
+    background-color: #ffa571;
+    border-color: #ffa571;
 }

@@ -3,7 +3,6 @@
 // User who is logged in can view the logged in nav bar
 
 import { ProContainer } from "../pros/ProContainer"
-import { ProList } from "../pros/ProList"
 import './Makr.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ImageCarousel } from "../ImageCarousel";
@@ -20,7 +19,7 @@ export const Makr = () => {
                 <ProContainer/>
             </section>
             <footer className="footer-home">
-                <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1663639606/Screen_Shot_2022-09-19_at_9.05.23_PM-removebg-preview_cvnxt3.png' alt="Home" className="footer-image"></img>
+                <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1664854224/image_mmqlth.png' alt="Home" className="footer-image"></img>
             </footer>
         </main>
         

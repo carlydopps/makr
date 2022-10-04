@@ -75,9 +75,21 @@
     color: whitesmoke;
 }
 
+.btn-editProfile:hover, .btn-accountSave:hover, .btn-accountCancel:hover {
+    box-shadow: 0 0.2rem 0.5rem 0 rgba(157, 157, 157, 0.24), 0 0.2rem 0.5rem 0 rgba(164, 164, 164, 0.19);
+    background-color: #ffa571;
+    border-color: #ffa571;
+}
+
 .btn-accountPhoto {
     background-color: #94da9a;
     border-color: #94da9a;
+}
+
+.btn-accountPhoto:hover {
+    box-shadow: 0 0.2rem 0.5rem 0 rgba(157, 157, 157, 0.24), 0 0.2rem 0.5rem 0 rgba(164, 164, 164, 0.19);
+    background-color: #b3e1b6;
+    border-color: #b3e1b6;
 }
 
 .body-proDetails {
