@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Makr
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A platform for the makers, the creators, and the DIYers
 
-## Available Scripts
+## Application Overview
 
-In the project directory, you can run:
+Makr is a platform where DIYers can connect with professionals for expert advice on specific project needs. By making expert feedback more accessible and customized, the goal is to help Makrs accomplish higher quality projects more efficiently and, in turn, create additional employment and remote opportunities for professionals. 
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Users can view, filter, and search for professionals
+- Users can create, edit, and delete their profiles
+- Users can submit project requests to a professional
+- Professional users can approve project requests
+- Users can view, filter, and delete projects
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Project List](https://res.cloudinary.com/dupram4w7/image/upload/v1668530749/Screen_Shot_2022-11-15_at_10.36.44_AM_naitem.png)
 
-### `npm test`
+## Technologies Used
+- JavaScript
+- React
+- Cloudinary
+- VS Code
+- JSON
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Running This Application
 
-### `npm run build`
+**Note:** *This application uses mock authentication for demonstration purposes only. This authentication process is not intended for professional implementation.*
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the project repository and change directories
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+git clone git@github.com:carlydopps/Makr.git
+cd makr
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Start the server
 
-### `npm run eject`
+```
+npm install --save react-router-dom
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Clone the api repository and start JSON server
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+git clone git@github.com:carlydopps/Makr-API.git
+cd makr-api
+json-server database.json -p 8088 -w
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Demo Login Credentials
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To login to the application, please sign in with the following email address: wes@gmail.com
 
-## Learn More
+You may also register as a new user by clicking the 'Register' link in the top, right-hand corner.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Created by Carly Doppelheuer
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[LinkedIn](https://www.linkedin.com/in/carlydoppelheuer/)
+[Github](https://github.com/carlydopps)
