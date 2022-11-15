@@ -55,6 +55,7 @@ To login to the application, please sign in with the following email address: we
 
 You may also register as a new user by clicking the 'Register' link in the top, right-hand corner.
 <br />
+<br />
 
 ### Created by Carly Doppelheuer
 [![My Skills](https://skillicons.dev/icons?i=github)](https://github.com/carlydopps) [![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/carlydoppelheuer/)
