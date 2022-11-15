@@ -17,11 +17,9 @@ Makr is a platform where DIYers can connect with professionals for expert advice
 ![Project List](https://res.cloudinary.com/dupram4w7/image/upload/v1668530749/Screen_Shot_2022-11-15_at_10.36.44_AM_naitem.png)
 
 ## Technologies Used
-- JavaScript
-- React
-- Cloudinary
-- VS Code
-- JSON
+[![My Skills](https://skills.thijs.gg/icons?i=js,react,html,css)](https://skills.thijs.gg)
+
+![Cloudinary](https://res.cloudinary.com/dupram4w7/image/upload/v1668534325/Screen_Shot_2022-11-15_at_11.43.47_AM_ozrpxh.png)
 
 ## Running This Application
 
@@ -55,7 +53,11 @@ To login to the application, please sign in with the following email address: we
 
 You may also register as a new user by clicking the 'Register' link in the top, right-hand corner.
 
-## Created by Carly Doppelheuer
+#### Created by Carly Doppelheuer
 
-[LinkedIn](https://www.linkedin.com/in/carlydoppelheuer/)
-[Github](https://github.com/carlydopps)
+[![My Skills](https://skillicons.dev/icons?i=github)][1] 
+
+[![My Skills](https://skillicons.dev/icons?i=linkedin)][2]
+
+[1]: https://www.linkedin.com/in/carlydoppelheuer/
+[2]: https://github.com/carlydopps
