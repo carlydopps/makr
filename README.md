@@ -55,6 +55,6 @@ You may also register as a new user by clicking the 'Register' link in the top, 
 
 
 
-### Created by Carly Doppelheuer
 
 [![My Skills](https://skillicons.dev/icons?i=github)](https://github.com/carlydopps) [![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/carlydoppelheuer/)
+### Created by Carly Doppelheuer
