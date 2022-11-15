@@ -5,11 +5,13 @@ A platform for the makers, the creators, and the DIYers
 ## Application Overview
 
 Makr is a platform where DIYers can connect with professionals for expert advice on specific project needs. By making expert feedback more accessible and customized, the goal is to help Makrs accomplish higher quality projects more efficiently and, in turn, create additional employment and remote opportunities for professionals. 
+<br />
 
 ## Technologies Used
 [![My Skills](https://skills.thijs.gg/icons?i=js,react,html,css,git)](https://skills.thijs.gg)
 
 ![Cloudinary](https://res.cloudinary.com/dupram4w7/image/upload/v1668534325/Screen_Shot_2022-11-15_at_11.43.47_AM_ozrpxh.png)
+<br />
 
 ## Features
 
@@ -52,8 +54,6 @@ json-server database.json -p 8088 -w
 To login to the application, please sign in with the following email address: wes@gmail.com
 
 You may also register as a new user by clicking the 'Register' link in the top, right-hand corner.
-
-<br />
 <br />
 
 ### Created by Carly Doppelheuer
