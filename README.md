@@ -44,7 +44,7 @@ npm start
 3. Clone the api repository and start JSON server
 
 ```
-git clone git@github.com:carlydopps/makr-API.git
+git clone git@github.com:carlydopps/makr-api.git
 cd makr-api
 json-server database.json -p 8088 -w
 ```
