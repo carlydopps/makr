@@ -30,7 +30,7 @@ Makr is a platform where DIYers can connect with professionals for expert advice
 1. Clone the project repository and change directories
 
 ```
-git clone git@github.com:carlydopps/Makr.git
+git clone git@github.com:carlydopps/makr.git
 cd makr
 ```
 
@@ -44,7 +44,7 @@ npm start
 3. Clone the api repository and start JSON server
 
 ```
-git clone git@github.com:carlydopps/Makr-API.git
+git clone git@github.com:carlydopps/makr-API.git
 cd makr-api
 json-server database.json -p 8088 -w
 ```
