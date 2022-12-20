@@ -1,4 +1,4 @@
-.image-project {
+.img-project {
     height: 15rem;
     width: 15rem;
 }
@@ -64,7 +64,7 @@
     text-overflow: ellipsis;
 }
 
-.details-project_imageFrame {
+.details-project_imgFrame {
     border: 0.1rem solid lightgray;
     border-radius: 10%;
     box-shadow: 0.5rem 0.2rem lightgray;
@@ -74,13 +74,13 @@
     background-color: white;
 }
 
-.details-project_image{
+.details-project_img{
     height: 100%;
     width: 100%;
     padding: 3rem;
 }
 
-.details-project_imageProfile{
+.details-project_imgProfile{
     width: 7rem;
     height: 7rem;
     border-radius: 100%;
@@ -102,12 +102,12 @@
     color: white;
 }
 
-.button_approve {
+.btn-approve {
     border-color: #98DE9F;
     background-color: #98DE9F;
 }
 
-.button_deny {
+.btn-deny {
     border-color: #324254;
     background-color: #324254;
 }
