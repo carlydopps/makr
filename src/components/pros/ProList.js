@@ -38,8 +38,8 @@ export const ProList = ({searchTermState}) => {
         {
             filteredPros.map(pro => {
                 return <div key={`pro--${pro.id}`}>
-                    <button onClick={() => navigate(`/profile/${pro.id}`)} className="button__pro">
-                        <img src={pro.user.profileImage} alt="Profile Image" className="profileImage-pro"/>
+                    <button onClick={() => navigate(`/profile/${pro.id}`)} className="btn-pro">
+                        <img src={pro.user.profileImage} alt="Profile Image" className="profileImg-pro"/>
                         <div className="pro-card_details">
                             <h4 className="h4-proName">{pro.user.name}</h4>
                             <ul className="list-proPreview">

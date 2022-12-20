@@ -31,8 +31,8 @@ export const AccountNav = ({user}) => {
         <button 
             aria-controls="simple-menu"
             aria-haspopup="true"
-            onClick={handleClick}className="navbar__account">
-            <img src={user?.profileImage} alt="Account" className="account-image"></img>
+            onClick={handleClick}className="navbar-account">
+            <img src={user?.profileImage} alt="Account" className="account-img"></img>
         </button>
         <Menu
                 keepMounted

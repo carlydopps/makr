@@ -24,12 +24,12 @@ export const LoggedOutNav = () => {
 
     return (
         <section className="navbar-out" style={{backgroundColor: background}}>
-            <button onClick={() => navigate(`/home`)} className="navbar__home">
-                <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1664854224/image_mmqlth.png' alt="Home" className="home-image"></img>
+            <button onClick={() => navigate(`/home`)} className="navbar-home">
+                <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1664854224/image_mmqlth.png' alt="Home" className="home-img"></img>
             </button>
             <section>
-                <button onClick={() => navigate("/login")} className="navbar__button navbar__login" style={{color: text}}>Login</button>
-                <button onClick={() => navigate("/register")} className="navbar__button navbar__register" style={{color: text}}>Register</button>
+                <button onClick={() => navigate("/login")} className="navbar-btn navbar__login" style={{color: text}}>Login</button>
+                <button onClick={() => navigate("/register")} className="navbar-btn navbar__register" style={{color: text}}>Register</button>
             </section>
         </section>
     )

@@ -1,4 +1,4 @@
-.button__pro {
+.btn-pro {
     color: rgb(71, 71, 71);
     border: 0.1rem solid whitesmoke;
     background-color: transparent;
@@ -12,7 +12,7 @@
     padding-right: 0;
 }
 
-.button__pro:hover {
+.btn-pro:hover {
     box-shadow: 0 0.5rem 1rem 0 rgba(61, 61, 61, 0.24), 0 0.5rem 1rem 0 rgba(63, 63, 63, 0.19);
 }
 
@@ -40,7 +40,7 @@
     border-radius: 5%;
 }
 
-.profileImage-pro {
+.profileImg-pro {
     border-radius: 5%;
     width: 17.8rem;
     height: 18rem;

@@ -3,7 +3,7 @@
     padding-bottom: 10rem;
 }
 
-.btn__submit, .cloudinary-button {
+.btn-submit, .btn-cloudinary {
     border-color: #FF9659;
     background-color: #FF9659;
     height: 3rem;
@@ -16,24 +16,24 @@
     color: white;
 }
 
-.btn__submit:hover {
+.btn-submit:hover {
     box-shadow: 0 0.2rem 0.5rem 0 rgba(157, 157, 157, 0.24), 0 0.2rem 0.5rem 0 rgba(164, 164, 164, 0.19);
     background-color: #ffa571;
     border-color: #ffa571;
 }
 
-.cloudinary-button {
+.btn-cloudinary {
     background-color: #94da9a;
     border-color: #94da9a;
 }
 
-.cloudinary-button:hover {
+.btn-cloudinary:hover {
     box-shadow: 0 0.2rem 0.5rem 0 rgba(157, 157, 157, 0.24), 0 0.2rem 0.5rem 0 rgba(164, 164, 164, 0.19);
     background-color: #b1e8b6;
     border-color: #b1e8b6;
 }
 
-.image-projectForm {
+.img-projectForm {
     height: 5rem;
     width: 5rem;
 }

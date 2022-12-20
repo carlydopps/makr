@@ -101,7 +101,7 @@ export const ProjectDetails = () => {
                                 <p className="details-project_userPhone">{`(${makr?.phone?.slice(0,3)}) ${makr?.phone?.slice(3, 6)}-${makr?.phone?.slice(6,10)}`}</p>
                                 <a href={`mailto:${makr?.email}`} className="details-project_userEmail">{makr?.email}</a>
                             </div>
-                            <img src={makr?.profileImage} className="details-project_imageProfile"/>
+                            <img src={makr?.profileImage} className="details-project_imgProfile"/>
                         </>
                         : <>
                         <p className="details-project_userInfo">
@@ -109,7 +109,7 @@ export const ProjectDetails = () => {
                                 <Link to={`/profile/${pro?.id}`}
                                 >{pro?.user?.name}</Link>
                         </p>
-                        <img src={pro?.user?.profileImage} className="details-project_imageProfile"/>
+                        <img src={pro?.user?.profileImage} className="details-project_imgProfile"/>
                         </>
                     }
                     
@@ -124,8 +124,8 @@ export const ProjectDetails = () => {
                         ? 
                             project.status === "Pending"
                             ? <>
-                            <button onClick={() => handleDecision("Approved")}className="button_approve">Approve</button>
-                            <button onClick={() => handleDecision("Cancelled")}className="button_deny">Deny</button>
+                            <button onClick={() => handleDecision("Approved")}className="btn-approve">Approve</button>
+                            <button onClick={() => handleDecision("Cancelled")}className="btn-deny">Deny</button>
                             </>
                             : project.status === "Approved"
                             ?<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="svg-approved" viewBox="0 0 16 16">
@@ -139,8 +139,8 @@ export const ProjectDetails = () => {
                 className="btn-return"
                 >Return to Project List</button>    
             </section>
-            <div className="details-project_imageFrame">
-                <img src={project.image} className="details-project_image"/>
+            <div className="details-project_imgFrame">
+                <img src={project.image} className="details-project_img"/>
             </div>
         </section>
     </div>

@@ -169,7 +169,7 @@ export const Account = () => {
                 </button>
         <fieldset>
             <div className="form-group">
-                <label className="accountEdit__label" htmlFor="email">Email: </label>
+                <label className="label-accountEdit" htmlFor="email">Email: </label>
                 <input
                     required autoFocus
                     type="text"
@@ -187,7 +187,7 @@ export const Account = () => {
         </fieldset>
         <fieldset>
             <div className="form-group">
-                <label className="accountEdit__label" htmlFor="phone">Phone Number: </label>
+                <label className="label-accountEdit" htmlFor="phone">Phone Number: </label>
                 <input 
                     type="tel"
                     className="form-control"
@@ -203,7 +203,7 @@ export const Account = () => {
             currentUser.isPro
             ?<section>
                <fieldset>
-                    <label className="accountEdit__label" htmlFor="aboutMe"> About Me: </label>
+                    <label className="label-accountEdit" htmlFor="aboutMe"> About Me: </label>
                     <input
                         required
                         type="text" 
@@ -220,7 +220,7 @@ export const Account = () => {
                         } />
                 </fieldset>
                 <fieldset>
-                    <label className="accountEdit__label" htmlFor="expertise"> Expertise: </label>
+                    <label className="label-accountEdit" htmlFor="expertise"> Expertise: </label>
                     <select
                         onChange={
                             (event) => {
@@ -240,7 +240,7 @@ export const Account = () => {
                     </select>
                 </fieldset>
                 <fieldset>
-                    <label className="accountEdit__label" htmlFor="price"> Price: </label>
+                    <label className="label-accountEdit" htmlFor="price"> Price: </label>
                     <input 
                         required
                         type="number" 
@@ -256,7 +256,7 @@ export const Account = () => {
                         }/>
                 </fieldset>
                 <fieldset>
-                    <label className="accountEdit__label" htmlFor="experience"> Years of Experience: </label>
+                    <label className="label-accountEdit" htmlFor="experience"> Years of Experience: </label>
                     <input
                         required
                         type="number" 
@@ -292,9 +292,9 @@ export const Account = () => {
 
     return <>
         <main className="main-account">
-            <div className="image-stack">
-                <img src="https://res.cloudinary.com/dupram4w7/image/upload/v1664860297/Re-Love_Project_before_after_copy_lkh6ew.png" className="image-stack_bottom"/>
-                <img src={user.profileImage} className="image-stack_top"/>
+            <div className="img-stack">
+                <img src="https://res.cloudinary.com/dupram4w7/image/upload/v1664860297/Re-Love_Project_before_after_copy_lkh6ew.png" className="img-stack_bottom"/>
+                <img src={user.profileImage} className="img-stack_top"/>
             </div>
             <section className="body-account">
                 <h1 className="h1-account">Hi, {firstName}!</h1>

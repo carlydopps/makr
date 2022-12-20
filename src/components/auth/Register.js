@@ -188,15 +188,15 @@ export const Register = () => {
 
     return <>
         <section>
-                <button onClick={() => navigate(`/home`)} className="navbar__home">
-                        <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1663639606/Screen_Shot_2022-09-19_at_9.05.23_PM-removebg-preview_cvnxt3.png' alt="Home" className="home-image"></img>
+                <button onClick={() => navigate(`/home`)} className="navbar-home">
+                        <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1663639606/Screen_Shot_2022-09-19_at_9.05.23_PM-removebg-preview_cvnxt3.png' alt="Home" className="home-img"></img>
                 </button>
         </section>
         <div className="page-auth">
         <main style={{ textAlign: "center" }} className="container-register">
             <section className="container-auth">
             <form className="form--login" onSubmit={handleRegister}>
-                <section className="auth-header">
+                <section className="header-auth">
                     <h2 className="h3 mb-3 font-weight-normal">Welcome to Makr</h2>
                 </section>
                 
