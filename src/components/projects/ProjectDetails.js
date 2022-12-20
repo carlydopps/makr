@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { Footer } from "../footer/Footer"
+import { getSelectedProject, saveProject } from "../managers/ProjectManager"
+import { getAssignedPro } from "../managers/ProManager"
+import { getAssignedMakr, getCurrentUser } from "../managers/UserManager"
 import "./ProjectDetails.css"
 
 export const ProjectDetails = () => {

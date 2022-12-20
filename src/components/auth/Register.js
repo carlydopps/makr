@@ -1,7 +1,10 @@
 import { React, useEffect, useState } from "react"
 import { useNavigate } from "react-router"
 import { Link } from "react-router-dom"
+import { getExpertiseTypes } from "../managers/ExpertiseManager"
 import { Footer } from "../footer/Footer"
+import { postPro } from "../managers/ProManager"
+import { checkEmail, postUser } from "../managers/UserManager"
 
 export const Register = () => {
 

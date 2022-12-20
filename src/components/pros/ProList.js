@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { getProsData } from "../managers/ProManager"
 import "./ProList.css"
 
 export const ProList = ({searchTermState}) => {
