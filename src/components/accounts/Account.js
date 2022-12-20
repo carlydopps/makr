@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { getExpertiseTypes } from "../managers/ExpertiseManager"
 import { Footer } from "../footer/Footer"
 import { getCurrentPro, saveEditedPro } from "../managers/ProManager"
 import { getCurrentUser, saveEditedUser } from "../managers/UserManager"
