@@ -34,8 +34,8 @@ export const ProProfile = () => {
     return <>
     <main className="main-profile">
         <section className="details-profile">
-            <div className="profile-image_frame">
-                <img src={pro.user?.profileImage} className="image-profileMain"/>
+            <div className="profile-img_frame">
+                <img src={pro.user?.profileImage} className="img-profileMain"/>
             </div>
             <div className="details-profile_info">
                 <h2>{pro.user?.name}</h2>
@@ -57,10 +57,10 @@ export const ProProfile = () => {
                     : <button onClick={() => navigate('/login')}className="btn-book">Login to book</button>
                 }
         </section>
-        <section className="profile-photoCollage">
+        <section className="profile-collage">
             {
                 images.map((image) => {
-                    return <img src={image.image} className="profile-collage-image"/>
+                    return <img src={image.image} className="profile-collage-img"/>
                 })
             }
         </section>

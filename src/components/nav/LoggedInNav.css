@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-.navbar__button {
+.navbar-btn {
     font-size: medium;
     border: none;
     background-color: transparent;
@@ -34,11 +34,11 @@
     transition: border 500ms ease; 
 }
 
-.navbar__button:hover {
+.navbar-btn:hover {
   border-bottom: 0.3rem solid #ffcab3;
 }
 
-.navbar__account {
+.navbar-account {
     border: none;
     border-radius: 100%;
     height: 3.5rem;
@@ -47,13 +47,13 @@
     margin: 1rem;
 }
 
-.account-image {
+.account-img {
     border-radius: 100%;
     height: 100%;
     width: 100%;
 }
 
-.navbar__home {
+.navbar-home {
     font-size: medium;
     border: none;
     background-color: transparent;
@@ -63,7 +63,7 @@
     margin: 1rem;
 }
 
-.home-image {
+.home-img {
     height: 100%;
     width: 100%;
 }

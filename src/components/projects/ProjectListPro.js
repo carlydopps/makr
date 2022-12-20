@@ -83,8 +83,8 @@ export const ProjectListPro = ({userId, projectType}) => {
                             (project) => 
                             { if (project.status !== "Cancelled") {
                                 return <div className="project" key={"makrProject--${project.id}"}>
-                                <div className="project-header">
-                                    <img src={project.image} className="image-projectPreview"/>
+                                <div className="header-project">
+                                    <img src={project.image} className="img-projectPreview"/>
                                     <button onClick={() => navigate(`/project/${project.id}/details`)} className="btn-project_view">View Details</button>
                                     {
                                         project.status === "Approved"
