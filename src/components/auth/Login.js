@@ -1,7 +1,3 @@
-// User can enter login information
-// User can click a button that will log them in and route to their previous location
-// User can click a link to reroute to the register page
-
 import React, { useState } from "react"
 import { useNavigate } from "react-router"
 import { Link } from "react-router-dom"

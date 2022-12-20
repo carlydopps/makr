@@ -1,13 +1,10 @@
-// User can click the logo and route to the home page
-// User can view the logged in nav bar
-// User can complete a form for project information
-// User can click a button to submit a project and trigger a submitted message
-
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-import { getCurrentUser, getSelectedPro, postProject } from "../ApiManager"
 import "./ProjectForm.css"
 import { Footer } from "../footer/Footer"
+import { getCurrentUser } from "../managers/UserManager"
+import { getSelectedPro } from "../managers/ProManager"
+import { postProject } from "../managers/ProjectManager"
 
 export const ProjectForm = () => {
 

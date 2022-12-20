@@ -1,5 +1,3 @@
-// User who is not logged in can click a sign up or login button in the nav bar that will route to the respective page
-
 import { useEffect, useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import "./LoggedOutNav.css"

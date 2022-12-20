@@ -50,10 +50,6 @@ export const ProjectList = () => {
                                 <label htmlFor="switchy">Pro</label>
                             </div>
                         </div>
-                        // <aside className="menu-listType">
-                        //     <button onClick={() => setProjectType("pro")} className="button-listType">Pro Projects</button>
-                        //     <button onClick={() => setProjectType("makr")} className="button-listType">Makr Projects</button>
-                        // </aside>
                         : ""
                     }
                     { 
