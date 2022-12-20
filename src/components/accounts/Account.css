@@ -12,13 +12,13 @@
     font-family: 'Mulish', sans-serif;
 }
 
-.image-stack {
+.img-stack {
     display: flex;
     position: relative;
     height: 100vh;
 }
 
-.image-stack_top {
+.img-stack_top {
     justify-content: center;
     height: 9rem;
     width: 9rem;
@@ -100,6 +100,6 @@ p {
     margin: 0;
 }
 
-.accountEdit__label {
+.label-accountEdit {
     color: gray;
 }

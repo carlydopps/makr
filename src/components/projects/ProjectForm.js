@@ -143,18 +143,18 @@ export const ProjectForm = () => {
             <section>
                 {
                     project.image !== ""
-                    ? <img src={project.image} alt="" className="image-projectForm"/>
+                    ? <img src={project.image} alt="" className="img-projectForm"/>
                     : ""
                 }
                 
                 <button onClick={(event) => showWidget(event)}
-                    className="cloudinary-button">
+                    className="btn-cloudinary">
                     Add photo
                 </button>
             </section>
             <button
                 onClick={(event) => handleSubmit(event)}
-                className="btn__submit"
+                className="btn-submit"
                 >Submit Request</button>
         </form>
         

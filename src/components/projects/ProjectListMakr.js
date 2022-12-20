@@ -111,8 +111,8 @@ export const ProjectListMakr = ({userId}) => {
             {
                 filteredProjects.map(
                     (project) => <div className="project" key={project.id}>
-                        <div className="project-header">
-                            <img src={project.image} className="image-projectPreview" alt="Project Image"/>
+                        <div className="header-project">
+                            <img src={project.image} className="img-projectPreview" alt="Project Image"/>
                             <button onClick={() => navigate(`/project/${project.id}/details`)} className="btn-project_view">View Details</button>
                             {
                                 project.status === "Approved"

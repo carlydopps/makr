@@ -42,12 +42,12 @@ export const LoggedInNav = () => {
 
     return (
         <section className="navbar-in" style={{backgroundColor: background}}>
-            <button onClick={() => navigate(`/`)} className="navbar__home">
-                <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1664854224/image_mmqlth.png' alt="Home" className="home-image"></img>
+            <button onClick={() => navigate(`/`)} className="navbar-home">
+                <img src='https://res.cloudinary.com/dupram4w7/image/upload/v1664854224/image_mmqlth.png' alt="Home" className="home-img"></img>
             </button>
             <section className="navbar-right">
-                <button onClick={() => navigate(`/`)} style={{color: text}} className="navbar__button navbar__pros">PROS</button>
-                <button onClick={() => navigate(`/projects`)} style={{color: text}} className="navbar__button navbar__projects">PROJECTS</button>
+                <button onClick={() => navigate(`/`)} style={{color: text}} className="navbar-btn navbar__pros">PROS</button>
+                <button onClick={() => navigate(`/projects`)} style={{color: text}} className="navbar-btn navbar__projects">PROJECTS</button>
             <AccountNav user={user}/>
             </section>
         </section>
