@@ -1,14 +1,8 @@
-// User can view contact information
-// User can edit contact information
-// User can view current projects
-// Makr user can delete a project
-// User can click the logo and route to the home page
-// User can view the logged in nav bar
-
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { getCurrentPro, getCurrentUser, getExpertiseTypes, saveEditedPro, saveEditedUser } from "../ApiManager"
 import { Footer } from "../footer/Footer"
+import { getCurrentPro, saveEditedPro } from "../managers/ProManager"
+import { getCurrentUser, saveEditedUser } from "../managers/UserManager"
 import "./Account.css"
 
 export const Account = () => {
@@ -174,7 +168,7 @@ export const Account = () => {
                 </button>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="email">Email: </label>
+                <label className="accountEdit__label" htmlFor="email">Email: </label>
                 <input
                     required autoFocus
                     type="text"
@@ -192,7 +186,7 @@ export const Account = () => {
         </fieldset>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="phone">Phone Number: </label>
+                <label className="accountEdit__label" htmlFor="phone">Phone Number: </label>
                 <input 
                     type="tel"
                     className="form-control"
@@ -208,7 +202,7 @@ export const Account = () => {
             currentUser.isPro
             ?<section>
                <fieldset>
-                    <label htmlFor="aboutMe"> About Me: </label>
+                    <label className="accountEdit__label" htmlFor="aboutMe"> About Me: </label>
                     <input
                         required
                         type="text" 
@@ -225,7 +219,7 @@ export const Account = () => {
                         } />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="expertise"> Expertise: </label>
+                    <label className="accountEdit__label" htmlFor="expertise"> Expertise: </label>
                     <select
                         onChange={
                             (event) => {
@@ -245,7 +239,7 @@ export const Account = () => {
                     </select>
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="price"> Price: </label>
+                    <label className="accountEdit__label" htmlFor="price"> Price: </label>
                     <input 
                         required
                         type="number" 
@@ -261,7 +255,7 @@ export const Account = () => {
                         }/>
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="experience"> Years of Experience: </label>
+                    <label className="accountEdit__label" htmlFor="experience"> Years of Experience: </label>
                     <input
                         required
                         type="number" 

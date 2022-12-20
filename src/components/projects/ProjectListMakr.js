@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { deleteProject, getMakrProjects } from "../ApiManager"
+import { deleteProject, getMakrProjects } from "../managers/ProjectManager"
 
 export const ProjectListMakr = ({userId}) => {
     

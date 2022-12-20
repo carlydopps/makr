@@ -1,8 +1,5 @@
-// Generates a list of profile previews for all pros
-
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { getProsData } from "../ApiManager"
 import "./ProList.css"
 
 export const ProList = ({searchTermState}) => {
