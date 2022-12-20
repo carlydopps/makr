@@ -1,11 +1,6 @@
-// User can click a button to route to current projects
-// User can click a button to route to contact information
-// User can click a button to logout and route to landing page
-
 import { Menu, MenuItem } from "@mui/material"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import { getCurrentUser } from "../ApiManager"
 import './AccountNav.css'
 
 export const AccountNav = ({user}) => {

@@ -1,9 +1,6 @@
-// User can click an account icon in the nav bar that will display a list of route options
-// User can click on a logout button
-
 import { useEffect, useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
-import { getCurrentUser } from "../ApiManager"
+import { getCurrentUser } from "../managers/UserManager"
 import { AccountNav } from "./AccountNav"
 import "./LoggedInNav.css"
 

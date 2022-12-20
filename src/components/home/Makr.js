@@ -1,7 +1,3 @@
-// User can view the home page with previews of professionals' profiles (imported component)
-// User who is not logged in can view the logged out nav bar
-// User who is logged in can view the logged in nav bar
-
 import { ProContainer } from "../pros/ProContainer"
 import './Makr.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
