@@ -1,13 +1,8 @@
 import { Outlet, Route, Routes } from "react-router-dom"
-import { Login } from "../auth/Login"
-import { Register } from "../auth/Register"
 import { Makr } from "../home/Makr"
 import { ProjectForm } from "../projects/ProjectForm"
 import { ProProfile } from "../pros/ProProfile"
 import { LandingPage } from "../home/LandingPage"
-import { LoggedOutNav } from "../nav/LoggedOutNav"
-import { Authorized } from "./Authorized"
-import { LoggedInView } from "./LoggedInView"
 
 export const LoggedOutView = () => {
     return <Routes>

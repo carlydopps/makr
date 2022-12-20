@@ -1,12 +1,6 @@
-// Use can enter information to register
-// If user wants to register as a pro, more input fields will be displayed
-// User can click a button that will create a new user account and route to their previous location
-// If user registered as a pro, a new pro account will also be created
-
 import { React, useEffect, useState } from "react"
 import { useNavigate } from "react-router"
 import { Link } from "react-router-dom"
-import { checkEmail, getExpertiseTypes, postPro, postUser } from "../ApiManager"
 import { Footer } from "../footer/Footer"
 
 export const Register = () => {

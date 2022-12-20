@@ -99,3 +99,7 @@
 p {
     margin: 0;
 }
+
+.accountEdit__label {
+    color: gray;
+}

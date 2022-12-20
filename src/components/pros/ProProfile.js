@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-import { getImages, getSelectedPro } from "../ApiManager"
 import { Footer } from "../footer/Footer"
-import { ProjectForm } from "../projects/ProjectForm"
+import { getImages } from "../managers/ImageManager"
+import { getSelectedPro } from "../managers/ProManager"
 import './ProProfile.css'
 
 export const ProProfile = () => {
@@ -30,11 +30,6 @@ export const ProProfile = () => {
         },
         [proId]
     )
-
-    const handleBookSession = () => {
-        <ProjectForm pro={pro}/>
-        navigate("/project-form")
-    }
 
     return <>
     <main className="main-profile">
