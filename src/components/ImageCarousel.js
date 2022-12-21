@@ -15,12 +15,6 @@ export const ImageCarousel = () => {
       <Carousel.Item className="carousel-item">
         <img
           className="img-carousel"
-          src="https://res.cloudinary.com/dupram4w7/image/upload/v1663909476/1_gsrlbx.png"
-        />
-      </Carousel.Item>
-      <Carousel.Item className="carousel-item">
-        <img
-          className="img-carousel"
           src="https://res.cloudinary.com/dupram4w7/image/upload/v1663907153/Screen_Shot_2022-09-22_at_11.25.03_PM_sj87ga.png"
         />
       </Carousel.Item>
@@ -28,6 +22,12 @@ export const ImageCarousel = () => {
         <img
           className="img-carousel"
           src="https://res.cloudinary.com/dupram4w7/image/upload/v1663908446/Screen_Shot_2022-09-22_at_11.46.18_PM_iqvh00.png"
+        />
+      </Carousel.Item>
+      <Carousel.Item className="carousel-item">
+        <img
+          className="img-carousel"
+          src="https://res.cloudinary.com/dupram4w7/image/upload/v1663909476/1_gsrlbx.png"
         />
       </Carousel.Item>
     </Carousel>
