@@ -6,6 +6,9 @@ A platform for the makers, the creators, and the DIYers
 
 Makr is a platform where DIYers can connect with professionals for expert advice on specific project needs. By making expert feedback more accessible and customized, the goal is to help Makrs accomplish higher quality projects more efficiently and, in turn, create additional employment and remote opportunities for professionals. 
 <br />
+
+![Project List](https://res.cloudinary.com/dupram4w7/image/upload/v1668530749/Screen_Shot_2022-11-15_at_10.36.44_AM_naitem.png)
+<br />
 <br />
 
 ## Technologies Used
@@ -22,8 +25,6 @@ Makr is a platform where DIYers can connect with professionals for expert advice
 - Users can submit project requests to a professional
 - Professional users can approve project requests
 - Users can view, filter, and delete projects
-
-![Project List](https://res.cloudinary.com/dupram4w7/image/upload/v1668530749/Screen_Shot_2022-11-15_at_10.36.44_AM_naitem.png)
 <br />
 
 ## Live Demo
