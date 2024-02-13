@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/makr/static/css/main.ef55f6dd.css",
+    "main.js": "/makr/static/js/main.8efd59ba.js",
+    "index.html": "/makr/index.html",
+    "main.ef55f6dd.css.map": "/makr/static/css/main.ef55f6dd.css.map",
+    "main.8efd59ba.js.map": "/makr/static/js/main.8efd59ba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef55f6dd.css",
+    "static/js/main.8efd59ba.js"
+  ]
+}
