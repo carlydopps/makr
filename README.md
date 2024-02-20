@@ -1,21 +1,6 @@
 # Makr
 
-A platform for the makers, the creators, and the DIYers
-
-## Application Overview
-
-Makr is a frontend application where DIYers can connect with professionals for expert advice on specific project needs. By making expert feedback more accessible and customized, the goal is to help Makrs accomplish higher quality projects more efficiently and, in turn, create additional employment and remote opportunities for professionals. 
-<br />
-
-![Project List](https://res.cloudinary.com/dupram4w7/image/upload/v1668530749/Screen_Shot_2022-11-15_at_10.36.44_AM_naitem.png)
-<br />
-<br />
-
-## Technologies Used
-[![My Skills](https://skills.thijs.gg/icons?i=js,react,html,css,git)](https://skills.thijs.gg)
-
-![Cloudinary](https://res.cloudinary.com/dupram4w7/image/upload/v1668534325/Screen_Shot_2022-11-15_at_11.43.47_AM_ozrpxh.png)
-<br />
+An application for the makers, the creators, and the DIYers. Makr allows users to schedule sessions with professionals for project feedback, track and manage project requests, showcase portfolios of work, and share reviews with other users.
 <br />
 
 ## Features
@@ -25,9 +10,27 @@ Makr is a frontend application where DIYers can connect with professionals for e
 - Users can submit project requests to a professional
 - Professional users can approve project requests
 - Users can view, filter, and delete projects
+
+## Technologies Used
+- JavaScript
+- React
+- Cloudinary
+- Bootstrap Icons
+- CSS Grid
+- Figma (Wireframe)
+- Canva (Logo design)
+- DB Diagram (ERD)
 <br />
 
-## Live Demo
+[![My Skills](https://skills.thijs.gg/icons?i=js,react,html,css,git)](https://skills.thijs.gg)
+<br />
+<br />
+
+![Project Preview](https://res.cloudinary.com/dupram4w7/image/upload/v1668530749/Screen_Shot_2022-11-15_at_10.36.44_AM_naitem.png)
+<br />
+<br />
+
+## Makr Demo
 https://vimeo.com/783445138
 <br />
 <br />
